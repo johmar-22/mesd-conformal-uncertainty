@@ -1,0 +1,17 @@
+=== step4_smoke_train | engine mesd_03_train_models.py | code v3 | MESD 5dcc2236ac5b ===
+start 2026-10-22 20:24:43 | work /content/drive/MyDrive/mesd_v1/work/smoke | settings {'MESD_TARGET': 'y_logId', 'MESD_DEBUG': '1'} | GPU Tesla T4, 15360 MiB | RAM 12.7 GB
+device: cuda
+12 runs | 0 already done with the current fingerprint (reused from checkpoint) | 12 to train | fingerprint none
+{'fp': '', 'scenario': 'S0_random', 'fold': 'all', 'seed': 0, 'n_train': 67473, 'n_eval': 37141, 'train_loss_ens': [0.24477, 0.26871], 'train_loss_q': 0.09156, 'minutes': 0.11}
+{'fp': '', 'scenario': 'S1_Lextreme', 'fold': 'all', 'seed': 0, 'n_train': 67089, 'n_eval': 37563, 'train_loss_ens': [0.22002, 0.28645], 'train_loss_q': 0.09498, 'minutes': 0.01}
+{'fp': '', 'scenario': 'S2_T125', 'fold': 'all', 'seed': 0, 'n_train': 67321, 'n_eval': 37331, 'train_loss_ens': [0.21402, 0.28508], 'train_loss_q': 0.09373, 'minutes': 0.01}
+{'fp': '', 'scenario': 'S3_ff', 'fold': 'all', 'seed': 0, 'n_train': 56335, 'n_eval': 48317, 'train_loss_ens': [0.14681, 0.10762], 'train_loss_q': 0.10723, 'minutes': 0.01}
+{'fp': '', 'scenario': 'S4_LOPO', 'fold': 'N180A', 'seed': 0, 'n_train': 79197, 'n_eval': 25436, 'train_loss_ens': [0.092, 0.10371], 'train_loss_q': 0.06783, 'minutes': 0.01}
+{'fp': '', 'scenario': 'S4_LOPO', 'fold': 'N180B', 'seed': 0, 'n_train': 65779, 'n_eval': 38828, 'train_loss_ens': [0.31141, 0.46969], 'train_loss_q': 0.08117, 'minutes': 0.01}
+{'fp': '', 'scenario': 'S4_LOPO', 'fold': 'N350A', 'seed': 0, 'n_train': 80889, 'n_eval': 23763, 'train_loss_ens': [0.09423, 0.10277], 'train_loss_q': 0.06718, 'minutes': 0.01}
+{'fp': '', 'scenario': 'S4_LOPO', 'fold': 'N40A', 'seed': 0, 'n_train': 73021, 'n_eval': 31631, 'train_loss_ens': [0.24057, 0.27934], 'train_loss_q': 0.09166, 'minutes': 0.01}
+{'fp': '', 'scenario': 'S4_LOPO', 'fold': 'N45A', 'seed': 0, 'n_train': 78991, 'n_eval': 25650, 'train_loss_ens': [0.09377, 0.10314], 'train_loss_q': 0.06721, 'minutes': 0.01}
+{'fp': '', 'scenario': 'S4_LOPO', 'fold': 'N45B', 'seed': 0, 'n_train': 71746, 'n_eval': 32906, 'train_loss_ens': [0.24009, 0.29569], 'train_loss_q': 0.09095, 'minutes': 0.01}
+{'fp': '', 'scenario': 'S4_LOPO', 'fold': 'N55A', 'seed': 0, 'n_train': 73700, 'n_eval': 30939, 'train_loss_ens': [0.24929, 0.32072], 'train_loss_q': 0.0909, 'minutes': 0.01}
+{'fp': '', 'scenario': 'S4_LOPO', 'fold': 'N90A', 'seed': 0, 'n_train': 64888, 'n_eval': 39753, 'train_loss_ens': [0.28774, 0.25031], 'train_loss_q': 0.09606, 'minutes': 0.01}
+done

@@ -1,0 +1,5 @@
+# Step 9.5 - full training for log10(Cgg): 44 runs (GPU; checkpointed per run)
+exec(open(f'{BASE}/code/mesd_common.py').read())
+require('3', '9.4'); require_gpu('Step 9.5')
+run_step('step9_5_train_Cgg', 'mesd_03_train_models.py', env={'MESD_TARGET': 'y_logCgg'}, key='train:main:y_logCgg', upstream=['splits:main', 'tune'])
+check_train('y_logCgg', '9.5', next_step='Step 9.6 (accuracy gate, Cgg)', log_prefix='step9_5_train_Cgg')

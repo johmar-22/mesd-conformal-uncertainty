@@ -1,0 +1,72 @@
+=== step10_6_sens_summary | engine mesd_06_sensitivity_summary.py | code v10 | MESD 5dcc2236ac5b ===
+start 2026-10-24 06:43:11 | work /content/drive/MyDrive/mesd_v1/work/main | settings default | GPU Tesla T4, 15360 MiB | RAM 51.0 GB
+
+1-2. ENSEMBLE SIZE (3 vs 5) AND CALIBRATION FRACTION (0.10 vs 0.20), alpha = 0.10, S0 and S4:
+                           main:coverage  main:curve_coverage  main:width_median  ens3:coverage  ens3:curve_coverage  ens3:width_median  cal10:coverage  cal10:curve_coverage  cal10:width_median  delta_cov_ens3  delta_curvecov_ens3  delta_cov_cal10  \
+scenario  method                                                                                                                                                                                                                                          
+S0_random CQR                      0.900                0.358              0.012          0.900                0.358              0.012           0.900                 0.363               0.011           0.000                0.000            0.000   
+          Mondrian-region          0.899                0.507              0.090          0.899                0.483              0.088           0.899                 0.495               0.069           0.000               -0.024            0.000   
+          NCP                      0.900                0.409              0.098          0.900                0.355              0.113           0.899                 0.408               0.079           0.000               -0.054           -0.001   
+          SCP-curve                0.990                0.899              0.202          0.992                0.901              0.423           0.989                 0.898               0.173           0.002                0.002           -0.001   
+          SCP-ens                  0.900                0.427              0.123          0.899                0.418              0.118           0.900                 0.415               0.097          -0.001               -0.009            0.000   
+S4_LOPO   CQR                      0.037                0.000              0.033          0.037                0.000              0.033           0.030                 0.000               0.047           0.000                0.000           -0.007   
+          Mondrian-region          0.089                0.000              0.074          0.094                0.000              0.079           0.071                 0.000               0.053           0.005                0.000           -0.018   
+          NCP                      0.628                0.265              0.799          0.625                0.235              0.967           0.595                 0.221               0.837          -0.003               -0.030           -0.033   
+          SCP-curve                0.825                0.541              1.560          0.893                0.619              3.256           0.809                 0.521               1.649           0.068                0.078           -0.016   
+          SCP-ens                  0.108                0.000              0.103          0.112                0.000              0.109           0.086                 0.000               0.073           0.004                0.000           -0.022   
+
+                           delta_curvecov_cal10  
+scenario  method                                 
+S0_random CQR                             0.005  
+          Mondrian-region                -0.012  
+          NCP                            -0.001  
+          SCP-curve                      -0.001  
+          SCP-ens                        -0.012  
+S4_LOPO   CQR                             0.000  
+          Mondrian-region                 0.000  
+          NCP                            -0.044  
+          SCP-curve                      -0.020  
+          SCP-ens                         0.000  
+
+3. COVERAGE LEVEL: coverage and rank (1 = closest to nominal) at alpha = 0.20, 0.10, 0.05:
+                            coverage               rank          
+alpha                           0.05   0.10   0.20 0.05 0.10 0.20
+scenario    method                                               
+S0_random   CQR                  NaN  0.900    NaN  NaN  1.0  NaN
+            Mondrian-region    0.950  0.899  0.799  1.0  4.0  3.0
+            NCP                0.950  0.900  0.800  2.0  3.0  1.0
+            SCP-curve          0.995  0.990  0.977  4.0  5.0  4.0
+            SCP-ens            0.950  0.900  0.799  3.0  2.0  2.0
+S1_Lextreme CQR                  NaN  0.409    NaN  NaN  5.0  NaN
+            Mondrian-region    0.666  0.580  0.468  4.0  4.0  4.0
+            NCP                0.798  0.724  0.615  2.0  2.0  2.0
+            SCP-curve          0.935  0.904  0.858  1.0  1.0  1.0
+            SCP-ens            0.707  0.611  0.485  3.0  3.0  3.0
+S2_T125     CQR                  NaN  0.610    NaN  NaN  5.0  NaN
+            Mondrian-region    0.854  0.769  0.634  4.0  4.0  4.0
+            NCP                0.928  0.879  0.784  1.0  1.0  1.0
+            SCP-curve          0.980  0.972  0.957  2.0  2.0  3.0
+            SCP-ens            0.873  0.795  0.659  3.0  3.0  2.0
+S3_ff       CQR                  NaN  0.035    NaN  NaN  5.0  NaN
+            Mondrian-region    0.134  0.099  0.068  4.0  4.0  4.0
+            NCP                0.559  0.493  0.407  2.0  2.0  2.0
+            SCP-curve          0.758  0.701  0.633  1.0  1.0  1.0
+            SCP-ens            0.183  0.132  0.085  3.0  3.0  3.0
+S4_LOPO     CQR                  NaN  0.037    NaN  NaN  5.0  NaN
+            Mondrian-region    0.118  0.089  0.063  4.0  4.0  4.0
+            NCP                0.707  0.628  0.520  2.0  2.0  2.0
+            SCP-curve          0.865  0.825  0.775  1.0  1.0  1.0
+            SCP-ens            0.154  0.108  0.071  3.0  3.0  3.0
+
+4. MODEL FAMILY CONTROL: S4 coverage on the BSIM4 folds (alpha = 0.10):
+       main (7 training PDKs per fold)                                          BSIM4 only (4 training PDKs per fold)                                         
+method                             CQR Mondrian-region    NCP SCP-curve SCP-ens                                   CQR Mondrian-region    NCP SCP-curve SCP-ens
+fold                                                                                                                                                          
+N180B                            0.042           0.073  0.746     0.859   0.091                                 0.149           0.008  0.648     0.871   0.011
+N40A                             0.031           0.114  0.672     0.888   0.137                                 0.039           0.125  0.424     0.722   0.144
+N45A                             0.007           0.052  0.322     0.522   0.055                                 0.059           0.024  0.574     0.855   0.025
+N45B                             0.026           0.093  0.509     0.804   0.115                                 0.032           0.063  0.322     0.612   0.078
+N55A                             0.036           0.149  0.715     0.897   0.176                                 0.048           0.079  0.679     0.939   0.098
+mean                             0.029           0.096  0.593     0.794   0.115                                 0.065           0.060  0.529     0.800   0.071
+
+saved to /content/drive/MyDrive/mesd_v1/work/main/paper/sensitivity ['sens_coverage_level.csv', 'sens_ensemble_and_calibration_size.csv', 'sens_model_family_bsim4.csv']

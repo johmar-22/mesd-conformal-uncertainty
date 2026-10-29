@@ -1,0 +1,5 @@
+# Step 11 - freeze the results: FINAL_SUMMARY.md + exports/MESD_results_<version>_<time>.zip (CPU)
+exec(open(f'{BASE}/code/mesd_common.py').read())
+require('8')
+run_step('step11_export', 'mesd_07_export.py')
+check_export()

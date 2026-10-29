@@ -1,0 +1,5 @@
+# Step 7 - conformal and uncertainty evaluation, log10(Id) (CPU, High-RAM; checkpointed per prediction file)
+exec(open(f'{BASE}/code/mesd_common.py').read())
+require('5', '6')
+run_step('step7_eval_Id', 'mesd_04_conformal_eval.py', env={'MESD_TARGET': 'y_logId'}, key='eval:main:y_logId', upstream=['train:main:y_logId'])
+check_eval('y_logId', '7', next_step='Step 8')

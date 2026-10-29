@@ -1,0 +1,75 @@
+STEP 1: build the dataset and run the audit
+code v3 | MESD commit 5dcc2236ac5b5eeb6228503f544053c2a359b636 | 2026-10-22 20:22:26 | GPU Tesla T4, 15360 MiB
+
+--- KEY RESULTS ---
+rows (bias points): 4,451,750 | curves: 305,750 | JSON files: 44 | PDKs: 11
+       family  curves  points  corners  temps
+pdk                                          
+N15A   FinFET     250    2250        1      5
+N3A    FinFET     400    3200        1      5
+N7A    FinFET    3600   28800        3      5
+N350A  planar   12000  144000        1      5
+N45A   planar   18000  198000        3      5
+N180A  planar   24000  456000        3      5
+N180B  planar   42000  924000        3      5
+N40A   planar   45000  585000        3      5
+N55A   planar   45000  585000        3      5
+N45B   planar   54000  594000        3      5
+N90A   planar   61500  931500        3      5
+
+audit per file:
+            file   pdk  node_nm    model type  n_curves  n_points  frac_cap_conservation_violated  frac_Cgs_gt_1p5_Cgg  median_Cgs_over_gm_div_omega  n_reverse_bias_curves
+ N15A-nmos1.json  N15A       15  unknown NMOS       125      1125                           0.800                0.800                         1.006                      0
+ N15A-pmos1.json  N15A       15  unknown PMOS       125      1125                           0.800                0.800                         1.005                      0
+N180A-nmos1.json N180A      180  BSIM3v3 NMOS     12000    228000                           0.875                0.875                         1.002                      0
+N180A-pmos1.json N180A      180  BSIM3v3 PMOS     12000    228000                           0.875                0.875                         1.002                   1500
+N180B-nmos1.json N180B      180  BSIM4.5 NMOS     12000    228000                           0.875                0.875                         1.002                      0
+N180B-nmos2.json N180B      180  BSIM4.5 NMOS      9000    234000                           0.833                0.833                         1.001                      0
+N180B-pmos1.json N180B      180  BSIM4.5 PMOS     12000    228000                           0.875                0.851                         1.001                   1500
+N180B-pmos2.json N180B      180  BSIM4.5 PMOS      9000    234000                           0.833                0.833                         1.001                      0
+N350A-nmos1.json N350A      350  BSIM3v3 NMOS      6000     72000                           0.909                0.850                         1.004                      0
+N350A-pmos1.json N350A      350  BSIM3v3 PMOS      6000     72000                           0.884                0.759                         1.007                      0
+  N3A-nmos1.json   N3A        3 BSIM-CMG NMOS       200      1600                           0.875                0.875                         0.940                      0
+  N3A-pmos1.json   N3A        3 BSIM-CMG PMOS       200      1600                           0.875                0.875                         1.004                      0
+ N40A-nmos1.json  N40A       40  BSIM4.5 NMOS      7500     97500                           0.780                0.697                         1.003                      0
+ N40A-nmos2.json  N40A       40  BSIM4.5 NMOS      7500     97500                           0.780                0.694                         1.004                      0
+ N40A-nmos3.json  N40A       40  BSIM4.5 NMOS      7500     97500                           0.780                0.693                         1.003                      0
+ N40A-pmos1.json  N40A       40  BSIM4.5 PMOS      7500     97500                           0.715                0.630                         1.004                      0
+ N40A-pmos2.json  N40A       40  BSIM4.5 PMOS      7500     97500                           0.714                0.630                         1.004                      0
+ N40A-pmos3.json  N40A       40  BSIM4.5 PMOS      7500     97500                           0.712                0.631                         1.003                      0
+ N45A-nmos1.json  N45A       45  unknown NMOS      9000     99000                           0.000                0.000                           NaN                      0
+ N45A-pmos1.json  N45A       45  unknown PMOS      9000     99000                           0.000                0.000                           NaN                      0
+ N45B-nmos1.json  N45B       45  BSIM4.3 NMOS      9000     99000                           0.833                0.833                         0.961                      0
+ N45B-nmos2.json  N45B       45  BSIM4.3 NMOS      9000     99000                           0.833                0.833                         0.944                      0
+ N45B-nmos3.json  N45B       45  BSIM4.3 NMOS      9000     99000                           0.833                0.833                         0.991                      0
+ N45B-pmos1.json  N45B       45  BSIM4.3 PMOS      9000     99000                           0.833                0.833                         1.001                      0
+ N45B-pmos2.json  N45B       45  BSIM4.3 PMOS      9000     99000                           0.833                0.833                         1.003                      0
+ N45B-pmos3.json  N45B       45  BSIM4.3 PMOS      9000     99000                           0.833                0.833                         1.001                      0
+ N55A-nmos1.json  N55A       55  BSIM4.5 NMOS      7500     97500                           0.781                0.700                         1.002                      0
+ N55A-nmos2.json  N55A       55  BSIM4.5 NMOS      7500     97500                           0.745                0.677                         1.007                      0
+ N55A-nmos3.json  N55A       55  BSIM4.5 NMOS      7500     97500                           0.786                0.708                         1.001                      0
+ N55A-pmos1.json  N55A       55  BSIM4.5 PMOS      7500     97500                           0.735                0.638                         1.005                      0
+ N55A-pmos2.json  N55A       55  BSIM4.5 PMOS      7500     97500                           0.689                0.631                         1.005                      0
+ N55A-pmos3.json  N55A       55  BSIM4.5 PMOS      7500     97500                           0.768                0.642                         1.002                      0
+  N7A-nmos1.json   N7A        7  unknown NMOS       600      4800                           0.875                0.875                         0.833                      0
+  N7A-nmos2.json   N7A        7  unknown NMOS       600      4800                           0.875                0.875                         0.948                      0
+  N7A-nmos3.json   N7A        7  unknown NMOS       600      4800                           0.875                0.875                         0.980                      0
+  N7A-pmos1.json   N7A        7  unknown PMOS       600      4800                           0.875                0.875                         0.879                      0
+  N7A-pmos2.json   N7A        7  unknown PMOS       600      4800                           0.875                0.875                         0.945                      0
+  N7A-pmos3.json   N7A        7  unknown PMOS       600      4800                           0.875                0.875                         0.957                      0
+ N90A-nmos1.json  N90A       90  BSIM3v3 NMOS      9000     99000                           0.833                0.833                         1.003                      0
+ N90A-nmos2.json  N90A       90  BSIM3v3 NMOS      9000     99000                           0.833                0.833                         1.002                      0
+ N90A-nmos3.json  N90A       90  BSIM3v3 NMOS      9000    189000                           0.833                0.833                         1.000                      0
+ N90A-pmos1.json  N90A       90  BSIM3v3 PMOS      9000     99000                           0.833                0.833                         1.003                      0
+ N90A-pmos2.json  N90A       90  BSIM3v3 PMOS      9000     99000                           0.833                0.833                         1.003                      0
+ N90A-pmos3.json  N90A       90  BSIM3v3 PMOS     16500    346500                           0.909                0.909                         1.000                      0
+
+--- CHECKS (expected values from the execution plan) ---
+[PASS] MESD commit in use | expected: 5dcc2236ac5b5eeb6228503f544053c2a359b636 | got: 5dcc2236ac5b5eeb6228503f544053c2a359b636
+[PASS] JSON files parsed | expected: 44 | got: 44
+[PASS] rows | curves | expected: 4,451,750 | 305,750 | got: 4,451,750 | 305,750
+[PASS] files violating Cgs/Cgd charge conservation in >10% of curves | expected: 42 of 44 (only N45A-nmos1 and N45A-pmos1 pass) | got: 42 of 44 (passing: ['N45A-nmos1.json', 'N45A-pmos1.json'])
+[PASS] median Cgs/(gm/2*pi*f) of the violating files | expected: between about 0.83 and 1.01 | got: 0.833 to 1.007
+[PASS] Monte Carlo files present | expected: False | got: False
+
+STEP 1 RESULT: PASS (all 6 checks passed) -> you can proceed to Step 2.

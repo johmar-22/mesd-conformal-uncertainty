@@ -1,0 +1,5 @@
+# Step 9.4 - smoke test for log10(Cgg) in work/smoke_cgg (plan Step 9 = repeat Steps 4-8 for Cgg)
+exec(open(f'{BASE}/code/mesd_common.py').read())
+require('2')
+run_smoke('y_logCgg', 'smoke_cgg', 'step9_4')
+check_smoke('y_logCgg', '9.4', 'smoke_cgg', 'Step 9.5')

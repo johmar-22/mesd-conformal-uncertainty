@@ -1,0 +1,36 @@
+{
+ "n_inputs": 15,
+ "features": [
+  "lW",
+  "lL",
+  "lNode",
+  "Tn",
+  "corner_o",
+  "is_p",
+  "Vgs_eff",
+  "Vds_eff",
+  "Vgs_n",
+  "Vds_n",
+  "Vov",
+  "Vdd",
+  "Vth_ref",
+  "lIon_ref",
+  "lIoff_ref"
+ ],
+ "n_ensemble": 5,
+ "hidden": 256,
+ "depth": 4,
+ "params_member": 201729,
+ "params_quantile": 202243,
+ "epochs": 60,
+ "lr": 0.005,
+ "batch": 8192,
+ "weight_decay": 1e-05,
+ "quantiles": [
+  0.05,
+  0.5,
+  0.95
+ ],
+ "per_square": true,
+ "divergence_limit": 0.05
+}

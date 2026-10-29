@@ -1,0 +1,126 @@
+STEP 11: freeze the results (FINAL_SUMMARY + export zip)
+code v10 | MESD commit 5dcc2236ac5b5eeb6228503f544053c2a359b636 | 2026-10-24 06:47:38 | GPU Tesla T4, 15360 MiB
+
+--- KEY RESULTS ---
+# MESD study: final summary
+
+- generated: 20261024_064350
+- code version: v10
+- MESD commit: 5dcc2236ac5b5eeb6228503f544053c2a359b636
+- tuned hyperparameters: {'epochs': 60, 'lr': 0.005, 'norm_wl': True, 'val_mae_dec': 0.007417269982397556, 'val_medrel_above': 0.008622229099273682, 'selected_on': 'S0_random seed 0, inner validation (15% of train curves)', 'debug': False}
+- prediction files y_logId: 44 of 44 expected
+- prediction files y_logCgg: 44 of 44 expected
+
+## y_logId: accuracy (mean over seeds / folds)
+
+| scenario    |   mae_dec |   medrel_above |   auroc_sigma_err |
+|:------------|----------:|---------------:|------------------:|
+| S0_random   |     0.028 |          0.035 |             0.962 |
+| S1_Lextreme |     0.125 |          0.098 |             0.883 |
+| S2_T125     |     0.058 |          0.051 |             0.909 |
+| S3_ff       |     0.471 |          0.584 |             0.699 |
+| S4_LOPO     |     0.467 |          0.488 |             0.764 |
+
+## y_logId: coverage at alpha = 0.10 (nominal coverage 0.90)
+
+| scenario    |   CQR |   Ens-Gauss |   Mondrian-region |   NCP |   SCP-curve |   SCP-ens |   SCP-single |   WCP |
+|:------------|------:|------------:|------------------:|------:|------------:|----------:|-------------:|------:|
+| S0_random   | 0.9   |       0.916 |             0.899 | 0.9   |       0.99  |     0.9   |        0.899 |   0.9 |
+| S1_Lextreme | 0.409 |       0.725 |             0.58  | 0.724 |       0.904 |     0.611 |        0.63  |   1   |
+| S2_T125     | 0.61  |       0.899 |             0.769 | 0.879 |       0.972 |     0.795 |        0.77  |   1   |
+| S3_ff       | 0.035 |       0.597 |             0.099 | 0.493 |       0.701 |     0.132 |        0.202 |   1   |
+| S4_LOPO     | 0.037 |       0.671 |             0.089 | 0.628 |       0.825 |     0.108 |        0.116 |   1   |
+
+## y_logId: curve_coverage at alpha = 0.10 (nominal coverage 0.90)
+
+| scenario    |   CQR |   Ens-Gauss |   Mondrian-region |   NCP |   SCP-curve |   SCP-ens |   SCP-single |   WCP |
+|:------------|------:|------------:|------------------:|------:|------------:|----------:|-------------:|------:|
+| S0_random   | 0.358 |       0.531 |             0.507 | 0.409 |       0.899 |     0.427 |        0.399 | 0.428 |
+| S1_Lextreme | 0.022 |       0.275 |             0.143 | 0.268 |       0.651 |     0.118 |        0.092 | 1     |
+| S2_T125     | 0.056 |       0.493 |             0.249 | 0.425 |       0.816 |     0.241 |        0.175 | 1     |
+| S3_ff       | 0     |       0.159 |             0     | 0.081 |       0.308 |     0     |        0.002 | 1     |
+| S4_LOPO     | 0     |       0.297 |             0     | 0.265 |       0.541 |     0     |        0     | 1     |
+
+## y_logId: width_median at alpha = 0.10 (nominal coverage 0.90)
+
+| scenario    |   CQR |   Ens-Gauss |   Mondrian-region |   NCP |   SCP-curve |   SCP-ens |   SCP-single |     WCP |
+|:------------|------:|------------:|------------------:|------:|------------:|----------:|-------------:|--------:|
+| S0_random   | 0.012 |       0.101 |             0.09  | 0.098 |       0.202 |     0.123 |        0.157 |   0.123 |
+| S1_Lextreme | 0.018 |       0.196 |             0.111 | 0.197 |       0.407 |     0.151 |        0.191 | inf     |
+| S2_T125     | 0.015 |       0.154 |             0.089 | 0.142 |       0.291 |     0.124 |        0.146 | inf     |
+| S3_ff       | 0.015 |       0.726 |             0.088 | 0.523 |       0.986 |     0.125 |        0.135 | inf     |
+| S4_LOPO     | 0.033 |       0.867 |             0.074 | 0.799 |       1.56  |     0.103 |        0.137 | inf     |
+
+## y_logCgg: accuracy (mean over seeds / folds)
+
+| scenario    |   mae_dec |   medrel_above |   auroc_sigma_err |
+|:------------|----------:|---------------:|------------------:|
+| S0_random   |     0.013 |          0.02  |           nan     |
+| S1_Lextreme |     0.023 |          0.032 |             0.733 |
+| S2_T125     |     0.014 |          0.022 |           nan     |
+| S3_ff       |     0.082 |          0.188 |             0.625 |
+| S4_LOPO     |     0.193 |          0.399 |             0.625 |
+
+## y_logCgg: coverage at alpha = 0.10 (nominal coverage 0.90)
+
+| scenario    |   CQR |   Ens-Gauss |   Mondrian-region |   NCP |   SCP-curve |   SCP-ens |   SCP-single |   WCP |
+|:------------|------:|------------:|------------------:|------:|------------:|----------:|-------------:|------:|
+| S0_random   | 0.9   |       0.821 |             0.899 | 0.9   |       0.991 |     0.899 |        0.899 |   0.9 |
+| S1_Lextreme | 0.568 |       0.746 |             0.697 | 0.854 |       0.983 |     0.697 |        0.724 |   1   |
+| S2_T125     | 0.81  |       0.846 |             0.87  | 0.921 |       0.994 |     0.869 |        0.848 |   1   |
+| S3_ff       | 0.091 |       0.952 |             0.321 | 0.98  |       0.999 |     0.327 |        0.406 |   1   |
+| S4_LOPO     | 0.041 |       0.524 |             0.08  | 0.622 |       0.834 |     0.081 |        0.103 |   1   |
+
+## y_logCgg: curve_coverage at alpha = 0.10 (nominal coverage 0.90)
+
+| scenario    |   CQR |   Ens-Gauss |   Mondrian-region |   NCP |   SCP-curve |   SCP-ens |   SCP-single |   WCP |
+|:------------|------:|------------:|------------------:|------:|------------:|----------:|-------------:|------:|
+| S0_random   | 0.359 |       0.236 |             0.428 | 0.396 |       0.9   |     0.394 |        0.39  | 0.397 |
+| S1_Lextreme | 0.053 |       0.168 |             0.135 | 0.355 |       0.85  |     0.114 |        0.117 | 1     |
+| S2_T125     | 0.178 |       0.301 |             0.38  | 0.513 |       0.93  |     0.35  |        0.279 | 1     |
+| S3_ff       | 0     |       0.791 |             0.019 | 0.892 |       0.988 |     0.016 |        0.028 | 1     |
+| S4_LOPO     | 0     |       0.233 |             0     | 0.336 |       0.668 |     0     |        0.001 | 1     |
+
+## y_logCgg: width_median at alpha = 0.10 (nominal coverage 0.90)
+
+| scenario    |   CQR |   Ens-Gauss |   Mondrian-region |   NCP |   SCP-curve |   SCP-ens |   SCP-single |     WCP |
+|:------------|------:|------------:|------------------:|------:|------------:|----------:|-------------:|--------:|
+| S0_random   | 0.006 |       0.041 |             0.051 | 0.054 |       0.124 |     0.057 |        0.06  |   0.058 |
+| S1_Lextreme | 0.009 |       0.058 |             0.047 | 0.081 |       0.187 |     0.053 |        0.076 | inf     |
+| S2_T125     | 0.007 |       0.05  |             0.049 | 0.066 |       0.153 |     0.053 |        0.065 | inf     |
+| S3_ff       | 0.01  |       0.493 |             0.069 | 0.644 |       1.449 |     0.08  |        0.133 | inf     |
+| S4_LOPO     | 0.016 |       0.433 |             0.04  | 0.55  |       1.191 |     0.044 |        0.063 | inf     |
+
+export zip: exports/MESD_results_v10_20261024_064350.zip 83.9 MB
+
+--- hypotheses ---
+SUPPORTED | H1 in-distribution | rule: each of SCP-single, SCP-ens, NCP, CQR, Mondrian: S0 coverage 0.89-0.91 (pilot 0.897-0.902) | observed: SCP-single 0.899, SCP-ens 0.900, NCP 0.900, CQR 0.900, Mondrian-region 0.899
+SUPPORTED | H1 technology shift | rule: SCP-ens coverage < 0.85 for at least 4 of 8 PDKs (pilot 2 of 2) | observed: 8 of 8: N180A 0.086, N180B 0.091, N350A 0.098, N40A 0.137, N45A 0.055, N45B 0.115, N55A 0.176, N90A 0.106
+SUPPORTED | H2 | rule: S0 SCP-ens worst-group coverage (worst PDK x region group, >= 1000 points) < 0.85 and NCP or Mondrian raises it by >= 0.05 | observed: SCP-ens 0.590, NCP 0.775, Mondrian-region 0.766
+SUPPORTED | H3 | rule: every S1-S4 run: domain AUC >= 0.99 and >= 50% infinite WCP intervals | observed: min AUC 1.000, min infinite share 1.000
+SUPPORTED | H4 | rule: S0 AUROC >= 0.80 and mean S4 AUROC lower (pilot 0.91 vs 0.72-0.78) | observed: S0 0.962, S4 0.764
+SUPPORTED | H5 | rule: S0 whole-curve coverage: SCP-curve 0.88-0.92 and SCP-ens < 0.70 (pilot 0.903 vs 0.402) | observed: SCP-curve 0.899, SCP-ens 0.427
+RQ3 (descriptive) | S0_random: smallest k with mean coverage >= 0.88 = 5, median width 0.131 dec
+RQ3 (descriptive) | S1_Lextreme: smallest k with mean coverage >= 0.88 = 20, median width 0.710 dec
+RQ3 (descriptive) | S2_T125: smallest k with mean coverage >= 0.88 = 5, median width 0.248 dec
+RQ3 (descriptive) | S3_ff: smallest k with mean coverage >= 0.88 = 20, median width 2.063 dec
+RQ3 (descriptive) | S4_LOPO: smallest k with mean coverage >= 0.88 = 5, median width 2.352 dec
+CONFIRMATORY | NCP vs SCP-ens on |coverage - 0.90| over 8 folds: Holm p = 0.0234 -> significantly BETTER than SCP-ens (closer to 0.90) (median gap 0.270 vs 0.798, closer in 8 of 8 folds)
+CONFIRMATORY | SCP-curve vs SCP-ens on |coverage - 0.90| over 8 folds: Holm p = 0.0234 -> significantly BETTER than SCP-ens (closer to 0.90) (median gap 0.094 vs 0.798, closer in 8 of 8 folds)
+CONFIRMATORY | CQR vs SCP-ens on |coverage - 0.90| over 8 folds: Holm p = 0.0234 -> significantly WORSE than SCP-ens (farther from 0.90) (median gap 0.871 vs 0.798, closer in 1 of 8 folds)
+
+
+--- COPIED TO DRIVE (figures/ and results/ in /content/drive/MyDrive/mesd_v1) ---
+  figures/Id               12 files
+  results/Id               15 files
+  figures/Cgg              12 files
+  results/Cgg              14 files
+  results/sensitivity      5 files
+  results/summary          1 files
+
+--- CHECKS (expected values from the execution plan) ---
+[PASS] FINAL_SUMMARY warnings | expected: none (44 runs per target, non-debug tuning) | got: none
+[PASS] core steps 1-8 PASSED | expected: all PASS | got: all PASS
+[PASS] Cgg (Step 9) and sensitivity (Step 10) finished | expected: PASS | got: {'9.8': 'PASS', '10.6': 'PASS_WITH_WARNINGS'}
+
+STEP 11 RESULT: PASS (all 3 checks passed) -> you can proceed to writing the paper from FINAL_SUMMARY.md.

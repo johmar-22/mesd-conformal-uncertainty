@@ -1,0 +1,8 @@
+method,n_folds,median_gap_SCPens,median_gap_method,folds_closer_to_090,direction,p_raw,family,p_holm,note
+Ens-Gauss,8,0.7981041686033006,0.22571186630471773,8,closer to 0.90 than SCP-ens,0.0078125,exploratory (unadjusted),,
+Mondrian-region,8,0.7981041686033006,0.8183937568961939,0,FARTHER from 0.90 than SCP-ens,0.0078125,exploratory (unadjusted),,
+WCP,8,0.7981041686033006,0.09999999999999998,8,closer to 0.90 than SCP-ens,0.0078125,exploratory (unadjusted),,coverage from infinite intervals; not a usable improvement
+SCP-single,8,0.7981041686033006,0.803968004051393,4,FARTHER from 0.90 than SCP-ens,0.640625,exploratory (unadjusted),,
+NCP,8,0.7981041686033006,0.2695522239151793,8,closer to 0.90 than SCP-ens,0.0078125,primary,0.0234375,
+SCP-curve,8,0.7981041686033006,0.0936414878539506,8,closer to 0.90 than SCP-ens,0.0078125,primary,0.0234375,
+CQR,8,0.7981041686033006,0.87139290736689,1,FARTHER from 0.90 than SCP-ens,0.015625,primary,0.0234375,

@@ -1,0 +1,14 @@
+STEP 9.4: smoke test (y_logCgg, separate folder work/smoke_cgg)
+code v5 | MESD commit 5dcc2236ac5b5eeb6228503f544053c2a359b636 | 2026-10-23 05:06:52 | GPU Tesla T4, 15360 MiB
+
+--- KEY RESULTS ---
+smoke runs: 12 | log lines: 12 | evaluated methods: ['CQR', 'Ens-Gauss', 'Mondrian-region', 'NCP', 'Recal-100', 'Recal-20', 'Recal-5', 'RecalNCP-100', 'RecalNCP-20', 'RecalNCP-5', 'SCP-curve', 'SCP-ens', 'SCP-single', 'WCP', 'accuracy']
+figures: ['fig1_audit_cgs_artifact.png', 'fig2_coverage_by_method.png', 'fig3_recalibration_budget.png', 'fig4_lopo_coverage_by_pdk.png', 'fig5_recalibration_width.png', 'fig6_curve_coverage.png']
+(2 epochs on 3% of the curves: the numbers are meaningless; only the pipeline is checked)
+
+--- CHECKS (expected values from the execution plan) ---
+[PASS] smoke runs and train_log lines | expected: 12 runs, 12 lines | got: 12 runs, 12 lines
+[PASS] all interval methods evaluated | expected: SCP-single, SCP-ens, Ens-Gauss, NCP, CQR, Mondrian-region, SCP-curve, WCP | got: all present
+[PASS] figures written | expected: 6 | got: 6
+
+STEP 9.4 RESULT: PASS (all 3 checks passed) -> you can proceed to Step 9.5.

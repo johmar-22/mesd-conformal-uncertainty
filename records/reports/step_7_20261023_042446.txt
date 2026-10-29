@@ -1,0 +1,162 @@
+STEP 7: uncertainty evaluation for y_logId
+code v3 | MESD commit 5dcc2236ac5b5eeb6228503f544053c2a359b636 | 2026-10-23 04:24:43 | GPU none
+
+--- KEY RESULTS ---
+runs evaluated: 44 | test curves per run 10493-76500 | calibration curves per run 32612-46130
+
+ACCURACY (RQ1; mean and SD over seeds/folds):
+            mae_dec        mae_dec_sub        mae_dec_above        medrel_above        auroc_sigma_err        frac_err_gt_flag       
+               mean    std        mean    std          mean    std         mean    std            mean    std             mean    std
+scenario                                                                                                                             
+S0_random     0.028  0.007       0.046  0.012         0.021  0.006        0.035  0.009           0.962  0.029            0.002  0.001
+S1_Lextreme   0.125  0.014       0.236  0.028         0.083  0.009        0.098  0.014           0.883  0.033            0.104  0.013
+S2_T125       0.058  0.011       0.123  0.019         0.033  0.009        0.051  0.015           0.909  0.024            0.029  0.005
+S3_ff         0.471  0.104       0.840  0.152         0.332  0.087        0.584  0.323           0.699  0.090            0.502  0.095
+S4_LOPO       0.467  0.186       0.903  0.327         0.308  0.154        0.488  0.196           0.764  0.079            0.433  0.150
+
+POINT COVERAGE, alpha = 0.10 (nominal 0.90):
+method       SCP-single  SCP-ens  Ens-Gauss    NCP    CQR  Mondrian-region  SCP-curve  WCP
+scenario                                                                                  
+S0_random         0.899    0.900      0.916  0.900  0.900            0.899      0.990  0.9
+S1_Lextreme       0.630    0.611      0.725  0.724  0.409            0.580      0.904  1.0
+S2_T125           0.770    0.795      0.899  0.879  0.610            0.769      0.972  1.0
+S3_ff             0.202    0.132      0.597  0.493  0.035            0.099      0.701  1.0
+S4_LOPO           0.116    0.108      0.671  0.628  0.037            0.089      0.825  1.0
+
+WHOLE-CURVE COVERAGE:
+method       SCP-single  SCP-ens  Ens-Gauss    NCP    CQR  Mondrian-region  SCP-curve    WCP
+scenario                                                                                    
+S0_random         0.399    0.427      0.531  0.409  0.358            0.507      0.899  0.428
+S1_Lextreme       0.092    0.118      0.275  0.268  0.022            0.143      0.651  1.000
+S2_T125           0.175    0.241      0.493  0.425  0.056            0.249      0.816  1.000
+S3_ff             0.002    0.000      0.159  0.081  0.000            0.000      0.308  1.000
+S4_LOPO           0.000    0.000      0.297  0.265  0.000            0.000      0.541  1.000
+
+MEDIAN WIDTH (decades):
+method       SCP-single  SCP-ens  Ens-Gauss    NCP    CQR  Mondrian-region  SCP-curve    WCP
+scenario                                                                                    
+S0_random         0.157    0.123      0.101  0.098  0.012            0.090      0.202  0.123
+S1_Lextreme       0.191    0.151      0.196  0.197  0.018            0.111      0.407    inf
+S2_T125           0.146    0.124      0.154  0.142  0.015            0.089      0.291    inf
+S3_ff             0.135    0.125      0.726  0.523  0.015            0.088      0.986    inf
+S4_LOPO           0.137    0.103      0.867  0.799  0.033            0.074      1.560    inf
+
+WORST-GROUP COVERAGE (PDK x region):
+method       SCP-single  SCP-ens  Ens-Gauss    NCP    CQR  Mondrian-region  SCP-curve    WCP
+scenario                                                                                    
+S0_random         0.612    0.590      0.797  0.775  0.886            0.766      0.948  0.591
+S1_Lextreme       0.229    0.187      0.396  0.396  0.325            0.282      0.631  1.000
+S2_T125           0.139    0.118      0.612  0.559  0.011            0.164      0.783  1.000
+S3_ff             0.018    0.000      0.042  0.011  0.000            0.000      0.104  1.000
+S4_LOPO           0.044    0.041      0.569  0.535  0.028            0.065      0.748  1.000
+
+FRACTION OF INFINITE INTERVALS:
+method       SCP-single  SCP-ens  Ens-Gauss  NCP  CQR  Mondrian-region  SCP-curve  WCP
+scenario                                                                              
+S0_random           0.0      0.0        0.0  0.0  0.0              0.0        0.0  0.0
+S1_Lextreme         0.0      0.0        0.0  0.0  0.0              0.0        0.0  1.0
+S2_T125             0.0      0.0        0.0  0.0  0.0              0.0        0.0  1.0
+S3_ff               0.0      0.0        0.0  0.0  0.0              0.0        0.0  1.0
+S4_LOPO             0.0      0.0        0.0  0.0  0.0              0.0        0.0  1.0
+
+POINT COVERAGE 95% CLUSTER-BOOTSTRAP CI (mean of run CIs):
+method        SCP-single      SCP-ens    Ens-Gauss          NCP          CQR Mondrian-region    SCP-curve          WCP
+scenario                                                                                                              
+S0_random      0.898-0.9  0.898-0.901  0.915-0.917  0.898-0.901  0.899-0.901     0.898-0.901   0.989-0.99  0.899-0.901
+S1_Lextreme  0.627-0.633  0.608-0.613  0.723-0.728  0.721-0.726  0.406-0.412     0.577-0.583  0.902-0.905      1.0-1.0
+S2_T125      0.768-0.772  0.793-0.797  0.898-0.901  0.878-0.881  0.607-0.612     0.767-0.771  0.971-0.972      1.0-1.0
+S3_ff          0.2-0.204  0.131-0.133    0.595-0.6   0.49-0.495  0.034-0.036       0.098-0.1  0.699-0.703      1.0-1.0
+S4_LOPO      0.114-0.117   0.106-0.11  0.668-0.674  0.624-0.631  0.036-0.038      0.087-0.09  0.822-0.827      1.0-1.0
+
+COVERAGE AT alpha = 0.20 / 0.10 / 0.05:
+alpha                         0.05   0.10   0.20
+scenario    method                              
+S0_random   CQR                NaN  0.900    NaN
+            Mondrian-region  0.950  0.899  0.799
+            NCP              0.950  0.900  0.800
+            SCP-curve        0.995  0.990  0.977
+            SCP-ens          0.950  0.900  0.799
+S1_Lextreme CQR                NaN  0.409    NaN
+            Mondrian-region  0.666  0.580  0.468
+            NCP              0.798  0.724  0.615
+            SCP-curve        0.935  0.904  0.858
+            SCP-ens          0.707  0.611  0.485
+S2_T125     CQR                NaN  0.610    NaN
+            Mondrian-region  0.854  0.769  0.634
+            NCP              0.928  0.879  0.784
+            SCP-curve        0.980  0.972  0.957
+            SCP-ens          0.873  0.795  0.659
+S3_ff       CQR                NaN  0.035    NaN
+            Mondrian-region  0.134  0.099  0.068
+            NCP              0.559  0.493  0.407
+            SCP-curve        0.758  0.701  0.633
+            SCP-ens          0.183  0.132  0.085
+S4_LOPO     CQR                NaN  0.037    NaN
+            Mondrian-region  0.118  0.089  0.063
+            NCP              0.707  0.628  0.520
+            SCP-curve        0.865  0.825  0.775
+            SCP-ens          0.154  0.108  0.071
+
+RECALIBRATION WITH k TARGET-DOMAIN CURVES (RQ3): coverage | median width
+             coverage                                                      width_median                                                     
+method      Recal-100 Recal-20 Recal-5 RecalNCP-100 RecalNCP-20 RecalNCP-5    Recal-100 Recal-20 Recal-5 RecalNCP-100 RecalNCP-20 RecalNCP-5
+scenario                                                                                                                                    
+S0_random       0.901    0.910   0.893        0.899       0.900      0.891        0.124    0.135   0.131        0.098       0.100      0.101
+S1_Lextreme     0.898    0.902   0.868        0.898       0.894      0.842        0.625    0.710   0.655        0.384       0.389      0.356
+S2_T125         0.903    0.902   0.882        0.902       0.896      0.902        0.219    0.240   0.248        0.159       0.158      0.165
+S3_ff           0.900    0.891   0.870        0.898       0.890      0.850        2.105    2.063   2.015        2.105       2.109      2.031
+S4_LOPO         0.899    0.895   0.881        0.899       0.892      0.872        2.280    2.279   2.352        1.721       1.730      1.772
+
+LOPO COVERAGE BY HELD-OUT PDK (alpha = 0.10):
+method  SCP-single  SCP-ens  Ens-Gauss    NCP    CQR  Mondrian-region  SCP-curve  WCP
+fold                                                                                 
+N180A        0.148    0.086      0.650  0.551  0.017            0.067      0.857  1.0
+N180B        0.084    0.091      0.812  0.746  0.042            0.073      0.859  1.0
+N350A        0.076    0.098      0.934  0.919  0.022            0.078      0.991  1.0
+N40A         0.102    0.137      0.698  0.672  0.031            0.114      0.888  1.0
+N45A         0.090    0.055      0.368  0.322  0.007            0.052      0.522  1.0
+N45B         0.160    0.115      0.501  0.509  0.026            0.093      0.804  1.0
+N55A         0.196    0.176      0.779  0.715  0.036            0.149      0.897  1.0
+N90A         0.069    0.106      0.625  0.589  0.112            0.086      0.781  1.0
+
+LOPO ACCURACY BY HELD-OUT PDK:
+       mae_dec  medrel_above  auroc_sigma_err
+fold                                         
+N180A    0.367         0.529            0.777
+N180B    0.512         0.465            0.808
+N350A    0.351         0.381            0.780
+N40A     0.256         0.311            0.746
+N45A     0.814         0.751            0.708
+N45B     0.403         0.367            0.793
+N55A     0.361         0.312            0.810
+N90A     0.672         0.787            0.691
+
+DOMAIN-CLASSIFIER AUC (WCP):
+              mean    min
+scenario                 
+S0_random    0.499  0.496
+S1_Lextreme  1.000  1.000
+S2_T125      1.000  1.000
+S3_ff        1.000  1.000
+S4_LOPO      1.000  1.000
+
+CURVE CHECKS at Vds = VDD (RQ4: Vth error, Vth interval from the curve band):
+            nonmono_pred_above         nonmono_true_above         nonmono_true_all         vth_err_mV         vth_covered         vth_width_mV         vth_covered_pointwise        
+                          mean   count               mean   count             mean   count       mean   count        mean   count         mean   count                  mean   count
+scenario                                                                                                                                                                            
+S0_random                0.000   47503                0.0   47503            0.100   47503      4.063   47192       0.995   47127       39.075   47127                 0.840   47187
+S1_Lextreme              0.001   47500                0.0   47500            0.117   47500     30.121   47180       0.819   46004       96.994   46004                 0.400   47175
+S2_T125                  0.001   47500                0.0   47500            0.004   47500      6.897   46230       0.995   45512       70.059   45512                 0.702   46227
+S3_ff                    0.000   77500                0.0   77500            0.083   77500     80.155   76588       0.556   68150      178.222   68157                 0.016   76466
+S4_LOPO                  0.015  142401                0.0  142401            0.101  142401     81.528  138799       0.802  115382      252.967  116273                 0.065  138529
+
+--- CHECKS (expected values from the execution plan) ---
+[PASS] missing coverage values | expected: 0 | got: 0
+[PASS] runs evaluated | expected: 44 | got: 44
+[PASS] S0 domain-classifier AUC | expected: 0.45 to 0.55 (pilot 0.50) | got: 0.499
+[PASS] S0 coverage of SCP-ens at 90% | expected: 0.89 to 0.91, CI containing 0.90 (pilot 0.899, CI 0.896-0.902) | got: 0.900 (CI 0.898-0.901)
+[PASS] S0 whole-curve coverage of SCP-curve | expected: 0.88 to 0.92 (pilot 0.903) | got: 0.899
+[PASS] S1 to S4 domain-classifier AUC (every run) | expected: >= 0.99 (pilot 1.00) | got: min 1.000
+[PASS] above-threshold non-monotonic TRUE curves | expected: 0.000 | got: 0.000
+
+STEP 7 RESULT: PASS (all 7 checks passed) -> you can proceed to Step 8.

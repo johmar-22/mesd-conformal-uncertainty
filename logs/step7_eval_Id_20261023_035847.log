@@ -1,0 +1,76 @@
+=== step7_eval_Id | engine mesd_04_conformal_eval.py | code v3 | MESD 5dcc2236ac5b ===
+start 2026-10-23 03:58:47 | work /content/drive/MyDrive/mesd_v1/work/main | settings {'MESD_TARGET': 'y_logId', 'MESD_FP': 'a710298184856e0f'} | GPU none | RAM 51.0 GB
+44 prediction files | ensemble members used: all
+S0_random all 0 | MAE 0.026 dec | AUROC 1.00 | dom-AUC 0.50
+S0_random all 1 | MAE 0.016 dec | AUROC 0.99 | dom-AUC 0.50
+S0_random all 2 | MAE 0.035 dec | AUROC 0.95 | dom-AUC 0.50
+S0_random all 3 | MAE 0.031 dec | AUROC 0.95 | dom-AUC 0.50
+S0_random all 4 | MAE 0.031 dec | AUROC 0.93 | dom-AUC 0.50
+S1_Lextreme all 0 | MAE 0.124 dec | AUROC 0.90 | dom-AUC 1.00
+S1_Lextreme all 1 | MAE 0.104 dec | AUROC 0.93 | dom-AUC 1.00
+S1_Lextreme all 2 | MAE 0.136 dec | AUROC 0.85 | dom-AUC 1.00
+S1_Lextreme all 3 | MAE 0.120 dec | AUROC 0.88 | dom-AUC 1.00
+S1_Lextreme all 4 | MAE 0.140 dec | AUROC 0.86 | dom-AUC 1.00
+S2_T125 all 0 | MAE 0.058 dec | AUROC 0.93 | dom-AUC 1.00
+S2_T125 all 1 | MAE 0.075 dec | AUROC 0.87 | dom-AUC 1.00
+S2_T125 all 2 | MAE 0.044 dec | AUROC 0.93 | dom-AUC 1.00
+S2_T125 all 3 | MAE 0.052 dec | AUROC 0.92 | dom-AUC 1.00
+S2_T125 all 4 | MAE 0.060 dec | AUROC 0.90 | dom-AUC 1.00
+S3_ff all 0 | MAE 0.458 dec | AUROC 0.77 | dom-AUC 1.00
+S3_ff all 1 | MAE 0.532 dec | AUROC 0.79 | dom-AUC 1.00
+S3_ff all 2 | MAE 0.616 dec | AUROC 0.57 | dom-AUC 1.00
+S3_ff all 3 | MAE 0.371 dec | AUROC 0.65 | dom-AUC 1.00
+S3_ff all 4 | MAE 0.378 dec | AUROC 0.70 | dom-AUC 1.00
+S4_LOPO N180A 0 | MAE 0.327 dec | AUROC 0.89 | dom-AUC 1.00
+S4_LOPO N180A 1 | MAE 0.380 dec | AUROC 0.58 | dom-AUC 1.00
+S4_LOPO N180A 2 | MAE 0.395 dec | AUROC 0.86 | dom-AUC 1.00
+S4_LOPO N180B 0 | MAE 0.549 dec | AUROC 0.80 | dom-AUC 1.00
+S4_LOPO N180B 1 | MAE 0.403 dec | AUROC 0.81 | dom-AUC 1.00
+S4_LOPO N180B 2 | MAE 0.585 dec | AUROC 0.81 | dom-AUC 1.00
+S4_LOPO N350A 0 | MAE 0.360 dec | AUROC 0.77 | dom-AUC 1.00
+S4_LOPO N350A 1 | MAE 0.365 dec | AUROC 0.90 | dom-AUC 1.00
+S4_LOPO N350A 2 | MAE 0.329 dec | AUROC 0.67 | dom-AUC 1.00
+S4_LOPO N40A 0 | MAE 0.244 dec | AUROC 0.76 | dom-AUC 1.00
+S4_LOPO N40A 1 | MAE 0.278 dec | AUROC 0.73 | dom-AUC 1.00
+S4_LOPO N40A 2 | MAE 0.245 dec | AUROC 0.75 | dom-AUC 1.00
+S4_LOPO N45A 0 | MAE 0.927 dec | AUROC 0.74 | dom-AUC 1.00
+S4_LOPO N45A 1 | MAE 0.719 dec | AUROC 0.72 | dom-AUC 1.00
+S4_LOPO N45A 2 | MAE 0.797 dec | AUROC 0.66 | dom-AUC 1.00
+S4_LOPO N45B 0 | MAE 0.432 dec | AUROC 0.81 | dom-AUC 1.00
+S4_LOPO N45B 1 | MAE 0.399 dec | AUROC 0.83 | dom-AUC 1.00
+S4_LOPO N45B 2 | MAE 0.379 dec | AUROC 0.73 | dom-AUC 1.00
+S4_LOPO N55A 0 | MAE 0.384 dec | AUROC 0.83 | dom-AUC 1.00
+S4_LOPO N55A 1 | MAE 0.346 dec | AUROC 0.76 | dom-AUC 1.00
+S4_LOPO N55A 2 | MAE 0.353 dec | AUROC 0.84 | dom-AUC 1.00
+S4_LOPO N90A 0 | MAE 0.615 dec | AUROC 0.65 | dom-AUC 1.00
+S4_LOPO N90A 1 | MAE 0.700 dec | AUROC 0.72 | dom-AUC 1.00
+S4_LOPO N90A 2 | MAE 0.703 dec | AUROC 0.70 | dom-AUC 1.00
+44 prediction files | 0 reused from checkpoint | 44 computed now
+method         CQR  Ens-Gauss  Mondrian-region    NCP  Recal-100  Recal-20  Recal-5  RecalNCP-100  RecalNCP-20  RecalNCP-5  SCP-curve  SCP-ens  SCP-single  WCP
+scenario                                                                                                                                                       
+S0_random    0.900      0.916            0.899  0.900      0.901     0.910    0.893         0.899        0.900       0.891      0.990    0.900       0.899  0.9
+S1_Lextreme  0.409      0.725            0.580  0.724      0.898     0.902    0.868         0.898        0.894       0.842      0.904    0.611       0.630  1.0
+S2_T125      0.610      0.899            0.769  0.879      0.903     0.902    0.882         0.902        0.896       0.902      0.972    0.795       0.770  1.0
+S3_ff        0.035      0.597            0.099  0.493      0.900     0.891    0.870         0.898        0.890       0.850      0.701    0.132       0.202  1.0
+S4_LOPO      0.037      0.671            0.089  0.628      0.899     0.895    0.881         0.899        0.892       0.872      0.825    0.108       0.116  1.0
+method         CQR  Ens-Gauss  Mondrian-region    NCP  Recal-100  Recal-20  Recal-5  RecalNCP-100  RecalNCP-20  RecalNCP-5  SCP-curve  SCP-ens  SCP-single    WCP
+scenario                                                                                                                                                         
+S0_random    0.358      0.531            0.507  0.409      0.434     0.480    0.433         0.411        0.420       0.416      0.899    0.427       0.399  0.428
+S1_Lextreme  0.022      0.275            0.143  0.268      0.641     0.654    0.584         0.636        0.628       0.524      0.651    0.118       0.092  1.000
+S2_T125      0.056      0.493            0.249  0.425      0.527     0.534    0.483         0.500        0.490       0.517      0.816    0.241       0.175  1.000
+S3_ff        0.000      0.159            0.000  0.081      0.547     0.523    0.492         0.697        0.679       0.609      0.308    0.000       0.002  1.000
+S4_LOPO      0.000      0.297            0.000  0.265      0.531     0.520    0.509         0.588        0.580       0.560      0.541    0.000       0.000  1.000
+             mae_dec  medrel_above  auroc_sigma_err
+scenario                                           
+S0_random      0.028         0.035            0.962
+S1_Lextreme    0.125         0.098            0.883
+S2_T125        0.058         0.051            0.909
+S3_ff          0.471         0.584            0.699
+S4_LOPO        0.467         0.488            0.764
+             nonmono_pred_above  nonmono_true_above  vth_err_mV vth_covered  vth_width_mV vth_covered_pointwise
+scenario                                                                                                       
+S0_random                 0.000                 0.0       4.063    0.994674        39.075              0.840083
+S1_Lextreme               0.001                 0.0      30.121    0.818581        96.994                   0.4
+S2_T125                   0.001                 0.0       6.897    0.994793        70.059              0.702079
+S3_ff                     0.000                 0.0      80.155     0.55595       178.222              0.015615
+S4_LOPO                   0.015                 0.0      81.528     0.80185       252.967              0.064593

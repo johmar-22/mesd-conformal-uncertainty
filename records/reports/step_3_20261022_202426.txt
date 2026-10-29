@@ -1,0 +1,26 @@
+STEP 3: select hyperparameters on inner validation curves
+code v3 | MESD commit 5dcc2236ac5b5eeb6228503f544053c2a359b636 | 2026-10-22 20:24:25 | GPU Tesla T4, 15360 MiB
+
+--- KEY RESULTS ---
+tuning grid (inner validation = 15% of S0 seed-0 TRAINING curves; no calibration or test curve used):
+ epochs    lr  norm_wl  train_mse_std  diverged  val_mae_dec  val_mae_sub  val_medrel_above  minutes
+     40 0.002     True         0.0003     False       0.0258       0.0478            0.0277     0.74
+     40 0.005     True         0.0001     False       0.0130       0.0229            0.0150     0.67
+     60 0.003     True         0.0001     False       0.0111       0.0197            0.0126     1.05
+     60 0.005     True         0.0000     False       0.0074       0.0129            0.0086     1.09
+     60 0.005    False         0.0009     False       0.0522       0.0686            0.0826     1.08
+    100 0.005     True         0.0005     False       0.0344       0.0560            0.0438     1.79
+
+selected and frozen in tuning.json: {'epochs': 60, 'lr': 0.005, 'norm_wl': True, 'val_mae_dec': 0.007417269982397556, 'val_medrel_above': 0.008622229099273682, 'selected_on': 'S0_random seed 0, inner validation (15% of train curves)', 'debug': False}
+
+--- CHECKS (expected values from the execution plan) ---
+[PASS] tuning.json comes from a full (non-debug) run | expected: debug = False | got: False
+[PASS] selected configuration diverged | expected: False | got: False
+[INFO] winning configuration (plan rule: whatever tuning.json says is final) | expected: decided by the grid; the CPU pilot at 15% of data had favoured 100 epochs at lr 5e-3 | got: 60 epochs, lr 0.005, norm_wl True -> report these values in Methods
+[INFO] longer schedule at the same learning rate | expected: usually at least as good as a shorter one (one seed per configuration) | got: 100 epochs: val MAE 0.0344, train MSE 5.0e-04 vs selected val MAE 0.0074 -> a higher final training loss with more epochs suggests a late-schedule instability at lr 5e-3; Step 5 checks the training loss of every run, Step 6 checks accuracy
+[INFO] effect of the W/L normalisation (same epochs and lr) | expected: normalised target better (plan design choice) | got: val MAE 0.0522 without vs 0.0074 with normalisation
+[PASS] validation MAE (decades) | expected: near 0.03 (gate on S0 later: <= 0.05) | got: 0.0074
+[PASS] validation median relative error above Vth | expected: near 3-4% (gate: <= 5%) | got: 0.86%
+[PASS] 40 epochs at 2e-3 is clearly worse | expected: several times worse than the winner | got: 0.0258 vs 0.0074
+
+STEP 3 RESULT: PASS (all 5 checks passed) -> you can proceed to Step 4.

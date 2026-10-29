@@ -1,0 +1,14 @@
+SUPPORTED | H1 in-distribution | rule: each of SCP-single, SCP-ens, NCP, CQR, Mondrian: S0 coverage 0.89-0.91 (pilot 0.897-0.902) | observed: SCP-single 0.899, SCP-ens 0.900, NCP 0.900, CQR 0.900, Mondrian-region 0.899
+SUPPORTED | H1 technology shift | rule: SCP-ens coverage < 0.85 for at least 4 of 8 PDKs (pilot 2 of 2) | observed: 8 of 8: N180A 0.086, N180B 0.091, N350A 0.098, N40A 0.137, N45A 0.055, N45B 0.115, N55A 0.176, N90A 0.106
+SUPPORTED | H2 | rule: S0 SCP-ens worst-group coverage (worst PDK x region group, >= 1000 points) < 0.85 and NCP or Mondrian raises it by >= 0.05 | observed: SCP-ens 0.590, NCP 0.775, Mondrian-region 0.766
+SUPPORTED | H3 | rule: every S1-S4 run: domain AUC >= 0.99 and >= 50% infinite WCP intervals | observed: min AUC 1.000, min infinite share 1.000
+SUPPORTED | H4 | rule: S0 AUROC >= 0.80 and mean S4 AUROC lower (pilot 0.91 vs 0.72-0.78) | observed: S0 0.962, S4 0.764
+SUPPORTED | H5 | rule: S0 whole-curve coverage: SCP-curve 0.88-0.92 and SCP-ens < 0.70 (pilot 0.903 vs 0.402) | observed: SCP-curve 0.899, SCP-ens 0.427
+RQ3 (descriptive) | S0_random: smallest k with mean coverage >= 0.88 = 5, median width 0.131 dec
+RQ3 (descriptive) | S1_Lextreme: smallest k with mean coverage >= 0.88 = 20, median width 0.710 dec
+RQ3 (descriptive) | S2_T125: smallest k with mean coverage >= 0.88 = 5, median width 0.248 dec
+RQ3 (descriptive) | S3_ff: smallest k with mean coverage >= 0.88 = 20, median width 2.063 dec
+RQ3 (descriptive) | S4_LOPO: smallest k with mean coverage >= 0.88 = 5, median width 2.352 dec
+CONFIRMATORY | NCP vs SCP-ens on |coverage - 0.90| over 8 folds: Holm p = 0.0234 -> significantly BETTER than SCP-ens (closer to 0.90) (median gap 0.270 vs 0.798, closer in 8 of 8 folds)
+CONFIRMATORY | SCP-curve vs SCP-ens on |coverage - 0.90| over 8 folds: Holm p = 0.0234 -> significantly BETTER than SCP-ens (closer to 0.90) (median gap 0.094 vs 0.798, closer in 8 of 8 folds)
+CONFIRMATORY | CQR vs SCP-ens on |coverage - 0.90| over 8 folds: Holm p = 0.0234 -> significantly WORSE than SCP-ens (farther from 0.90) (median gap 0.871 vs 0.798, closer in 1 of 8 folds)

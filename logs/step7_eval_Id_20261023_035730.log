@@ -1,0 +1,43 @@
+=== step7_eval_Id | engine mesd_04_conformal_eval.py | code v3 | MESD 5dcc2236ac5b ===
+start 2026-10-23 03:57:30 | work /content/drive/MyDrive/mesd_v1/work/main | settings {'MESD_TARGET': 'y_logId', 'MESD_FP': 'a710298184856e0f'} | GPU none | RAM 12.7 GB
+44 prediction files | ensemble members used: all
+Traceback (most recent call last):
+  File "<string>", line 153, in _run_engine
+  File "/content/drive/MyDrive/mesd_v1/code/engine/mesd_04_conformal_eval.py", line 183, in <module>
+    P = pd.read_parquet(fn).merge(meta, on='row', how='left')
+        ~~~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/dist-packages/pandas/io/parquet.py", line 667, in read_parquet
+    return impl.read(
+           ~~~~~~~~~^
+        path,
+        ^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/dist-packages/pandas/io/parquet.py", line 274, in read
+    pa_table = self.api.parquet.read_table(
+        path_or_handle,
+    ...<3 lines>...
+        **kwargs,
+    )
+  File "/usr/local/lib/python3.13/dist-packages/pyarrow/parquet/core.py", line 1926, in read_table
+    return dataset.read(columns=columns, use_threads=use_threads,
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        use_pandas_metadata=use_pandas_metadata)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/pyarrow/parquet/core.py", line 1552, in read
+    table = self._dataset.to_table(
+        columns=columns, filter=self._filter_expression,
+        use_threads=use_threads
+    )
+KeyboardInterrupt
+
+
+============================== PASTE-BACK FAILURE REPORT: step7_eval_Id ==============================
+code v3 | MESD 5dcc2236ac5b | GPU none | RAM 12.7 GB | settings {'MESD_TARGET': 'y_logId', 'MESD_FP': 'a710298184856e0f'}
+error: KeyboardInterrupt: 
+full log: logs/step7_eval_Id_20261023_035730.log (also in records/errors.log)
+Copy the WHOLE cell output above (including the traceback) and paste it back.
+================================================================================

@@ -1,0 +1,11 @@
+# Package versions recorded in records/environment_log.txt for the code v10 runs (Google Colab, Python 3.13).
+# The GPU sessions used torch 2.11.0+cu130 (CUDA 13.0); install the CUDA build that matches your runtime.
+numpy==2.1.3
+pandas==2.2.3
+pyarrow==23.0.1
+scipy==1.16.3
+scikit-learn==1.6.1
+matplotlib==3.10.0
+torch==2.11.0
+# optional: nicer Markdown tables in records/FINAL_SUMMARY.md (the code falls back to plain text without it)
+tabulate

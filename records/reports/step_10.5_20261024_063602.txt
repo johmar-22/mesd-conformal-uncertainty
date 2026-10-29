@@ -1,0 +1,99 @@
+STEP 10.5: sensitivity evaluation: BSIM4 PDKs only
+code v9 | MESD commit 5dcc2236ac5b5eeb6228503f544053c2a359b636 | 2026-10-24 06:36:01 | GPU Tesla T4, 15360 MiB
+
+--- KEY RESULTS ---
+runs evaluated: 15 | test curves per run 14990-44970 | calibration curves per run 24249-30333
+
+ACCURACY (RQ1; mean and SD over seeds/folds):
+         mae_dec        mae_dec_sub        mae_dec_above      medrel_above        auroc_sigma_err        frac_err_gt_flag       
+            mean    std        mean    std          mean  std         mean    std            mean    std             mean    std
+scenario                                                                                                                        
+S4_LOPO     0.91  0.794       1.724  1.871         0.654  0.6       11.856  35.42           0.785  0.095            0.524  0.247
+
+POINT COVERAGE, alpha = 0.10 (nominal 0.90):
+method    SCP-single  SCP-ens  Ens-Gauss    NCP    CQR  Mondrian-region  SCP-curve  WCP
+scenario                                                                               
+S4_LOPO        0.062    0.071      0.547  0.529  0.065             0.06        0.8  1.0
+
+WHOLE-CURVE COVERAGE:
+method    SCP-single  SCP-ens  Ens-Gauss    NCP  CQR  Mondrian-region  SCP-curve  WCP
+scenario                                                                             
+S4_LOPO          0.0      0.0      0.162  0.137  0.0              0.0      0.462  1.0
+
+MEDIAN WIDTH (decades):
+method    SCP-single  SCP-ens  Ens-Gauss    NCP    CQR  Mondrian-region  SCP-curve  WCP
+scenario                                                                               
+S4_LOPO        0.049    0.058      1.467  1.937  0.478            0.043      4.409  inf
+
+WORST-GROUP COVERAGE (PDK x region):
+method    SCP-single  SCP-ens  Ens-Gauss    NCP   CQR  Mondrian-region  SCP-curve  WCP
+scenario                                                                              
+S4_LOPO        0.022    0.028      0.362  0.338  0.03            0.044      0.648  1.0
+
+FRACTION OF INFINITE INTERVALS:
+method    SCP-single  SCP-ens  Ens-Gauss  NCP  CQR  Mondrian-region  SCP-curve  WCP
+scenario                                                                           
+S4_LOPO          0.0      0.0        0.0  0.0  0.0              0.0        0.0  1.0
+
+POINT COVERAGE 95% CLUSTER-BOOTSTRAP CI (mean of run CIs):
+method     SCP-single     SCP-ens   Ens-Gauss          NCP          CQR Mondrian-region    SCP-curve      WCP
+scenario                                                                                                     
+S4_LOPO   0.061-0.063  0.07-0.072  0.544-0.55  0.526-0.533  0.064-0.067     0.059-0.061  0.797-0.802  1.0-1.0
+
+COVERAGE AT alpha = 0.20 / 0.10 / 0.05:
+alpha                      0.05   0.10   0.20
+scenario method                              
+S4_LOPO  CQR                NaN  0.065    NaN
+         Mondrian-region  0.080  0.060  0.042
+         NCP              0.621  0.529  0.428
+         SCP-curve        0.854  0.800  0.727
+         SCP-ens          0.100  0.071  0.047
+
+RECALIBRATION WITH k TARGET-DOMAIN CURVES (RQ3): coverage | median width
+          coverage                                                      width_median                                                     
+method   Recal-100 Recal-20 Recal-5 RecalNCP-100 RecalNCP-20 RecalNCP-5    Recal-100 Recal-20 Recal-5 RecalNCP-100 RecalNCP-20 RecalNCP-5
+scenario                                                                                                                                 
+S4_LOPO      0.899    0.899   0.869        0.901       0.897      0.882        4.415    4.598   4.491        5.334       5.741      5.681
+
+LOPO COVERAGE BY HELD-OUT PDK (alpha = 0.10):
+method  SCP-single  SCP-ens  Ens-Gauss    NCP    CQR  Mondrian-region  SCP-curve  WCP
+fold                                                                                 
+N180B        0.012    0.011      0.510  0.648  0.149            0.008      0.871  1.0
+N40A         0.095    0.144      0.634  0.424  0.039            0.125      0.722  1.0
+N45A         0.009    0.025      0.673  0.574  0.059            0.024      0.855  1.0
+N45B         0.077    0.078      0.353  0.322  0.032            0.063      0.612  1.0
+N55A         0.117    0.098      0.565  0.679  0.048            0.079      0.939  1.0
+
+LOPO ACCURACY BY HELD-OUT PDK:
+       mae_dec  medrel_above  auroc_sigma_err
+fold                                         
+N180B    2.162        57.526            0.862
+N40A     0.285         0.327            0.735
+N45A     1.391         0.901            0.747
+N45B     0.398         0.339            0.703
+N55A     0.315         0.186            0.877
+
+DOMAIN-CLASSIFIER AUC (WCP):
+          mean  min
+scenario           
+S4_LOPO    1.0  1.0
+
+CURVE CHECKS at Vds = VDD (RQ4: Vth error, Vth interval from the curve band):
+         nonmono_pred_above         nonmono_true_above         nonmono_true_all         vth_err_mV        vth_covered        vth_width_mV        vth_covered_pointwise       
+                       mean   count               mean   count             mean   count       mean  count        mean  count         mean  count                  mean  count
+scenario                                                                                                                                                                     
+S4_LOPO                 0.0  107928                0.0  107928            0.132  107928     69.903  89462       0.667  80652      152.343  80664                 0.053  89443
+
+--- COPIED TO DRIVE (figures/ and results/ in /content/drive/MyDrive/mesd_v1) ---
+  figures/Id               12 files
+  results/Id               15 files
+  figures/Cgg              12 files
+  results/Cgg              14 files
+  results/sensitivity      2 files
+
+--- CHECKS (expected values from the execution plan) ---
+[PASS] missing coverage values | expected: 0 | got: 0
+[PASS] S1 to S4 domain-classifier AUC (every run) | expected: >= 0.99 (pilot 1.00) | got: min 1.000
+[PASS] above-threshold non-monotonic TRUE curves | expected: 0.000 | got: 0.000
+
+STEP 10.5 RESULT: PASS (all 3 checks passed) -> you can proceed to Step 10.6.

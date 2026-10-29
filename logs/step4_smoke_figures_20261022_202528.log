@@ -1,0 +1,43 @@
+=== step4_smoke_figures | engine mesd_05_figures_tables.py | code v3 | MESD 5dcc2236ac5b ===
+start 2026-10-22 20:25:28 | work /content/drive/MyDrive/mesd_v1/work/smoke | settings {'MESD_TARGET': 'y_logId'} | GPU Tesla T4, 15360 MiB | RAM 12.7 GB
+            method  n_folds  median_gap_SCPens  median_gap_method   p_raw                    family  p_holm
+0        Ens-Gauss        8             0.0527             0.6622  0.0078  exploratory (unadjusted)     NaN
+1  Mondrian-region        8             0.0527             0.0579  0.0156  exploratory (unadjusted)     NaN
+2              WCP        8             0.0527             0.1000  0.0156  exploratory (unadjusted)     NaN
+3       SCP-single        8             0.0527             0.0249  0.9453  exploratory (unadjusted)     NaN
+4        SCP-curve        8             0.0527             0.0918  0.0234                   primary  0.0703
+5              NCP        8             0.0527             0.0137  0.0781                   primary  0.1562
+6              CQR        8             0.0527             0.0594  0.9453                   primary  0.9453
+            mae_dec        mae_dec_sub        mae_dec_above       medrel_above        auroc_sigma_err        frac_err_gt_flag      
+               mean    std        mean    std          mean   std         mean    std            mean    std             mean   std
+scenario                                                                                                                           
+S0_random     0.736    NaN       0.930    NaN         0.665   NaN        0.862    NaN           0.590    NaN            0.740   NaN
+S1_Lextreme   0.776    NaN       1.101    NaN         0.654   NaN        0.850    NaN           0.515    NaN            0.725   NaN
+S2_T125       0.532    NaN       0.696    NaN         0.469   NaN        0.829    NaN           0.512    NaN            0.678   NaN
+S3_ff         0.511    NaN       0.897    NaN         0.365   NaN        0.718    NaN           0.588    NaN            0.594   NaN
+S4_LOPO       0.653  0.159       0.869  0.231         0.578  0.21        0.813  0.261           0.580  0.068            0.692  0.08
+             nonmono_pred_above  nonmono_true_above  nonmono_pred_all  nonmono_true_all  vth_err_mV  vth_covered  vth_width_mV  vth_covered_pointwise
+scenario                                                                                                                                             
+S0_random                   0.0                 0.0               0.0             0.102     143.900        0.833      1102.423                  0.788
+S1_Lextreme                 0.0                 0.0               0.0             0.134     145.953        1.000       971.014                  0.709
+S2_T125                     0.0                 0.0               0.0             0.004      72.360          NaN           NaN                  0.965
+S3_ff                       0.0                 0.0               0.0             0.074      80.461        1.000       338.428                  0.941
+S4_LOPO                     0.0                 0.0               0.0             0.103     171.806        1.000      1302.332                  0.813
+method         CQR  Ens-Gauss  Mondrian-region    NCP  SCP-curve  SCP-ens  SCP-single    WCP
+scenario                                                                                    
+S0_random    0.903      0.191            0.889  0.902      0.993    0.893       0.898  0.897
+S1_Lextreme  0.861      0.296            0.854  0.889      0.992    0.849       0.849  1.000
+S2_T125      0.913      0.277            0.973  0.896      0.991    0.966       0.944  1.000
+S3_ff        0.929      0.355            0.864  0.875      0.991    0.892       0.923  1.000
+S4_LOPO      0.880      0.258            0.869  0.906      0.993    0.883       0.860  1.000
+method    CQR  Ens-Gauss  Mondrian-region    NCP  SCP-curve  SCP-ens  SCP-single  WCP
+fold                                                                                 
+N180A   0.960      0.226            0.822  0.974      0.998    0.841       0.804  1.0
+N180B   0.968      0.351            0.740  0.877      0.991    0.772       0.706  1.0
+N350A   0.959      0.226            0.840  0.905      0.991    0.848       0.867  1.0
+N40A    0.862      0.270            0.956  0.911      0.992    0.953       0.917  1.0
+N45A    0.696      0.164            0.858  0.881      0.990    0.906       0.888  1.0
+N45B    0.905      0.245            0.961  0.901      0.993    0.962       0.934  1.0
+N55A    0.882      0.350            0.925  0.912      0.994    0.923       0.883  1.0
+N90A    0.809      0.231            0.849  0.885      0.992    0.860       0.884  1.0
+saved to /content/drive/MyDrive/mesd_v1/work/smoke/paper/y_logId ['fig1_audit_cgs_artifact.pdf', 'fig1_audit_cgs_artifact.png', 'fig2_coverage_by_method.pdf', 'fig2_coverage_by_method.png', 'fig3_recalibration_budget.pdf', 'fig3_recalibration_budget.png', 'fig4_lopo_coverage_vs_node.pdf', 'fig4_lopo_coverage_vs_node.png', 'fig5_recalibration_width.pdf', 'fig5_recalibration_width.png', 'fig6_curve_coverage.pdf', 'fig6_curve_coverage.png', 'table1_accuracy.csv', 'table1b_curve_checks.csv', 'table2_coverage_alpha0.10.csv', 'table3_lopo_coverage_by_pdk.csv', 'table4_lopo_paired_tests.csv']

@@ -1,0 +1,5 @@
+# Step 9.7 - conformal and uncertainty evaluation, log10(Cgg) (CPU, High-RAM; checkpointed per prediction file)
+exec(open(f'{BASE}/code/mesd_common.py').read())
+require('9.5', '9.6')
+run_step('step9_7_eval_Cgg', 'mesd_04_conformal_eval.py', env={'MESD_TARGET': 'y_logCgg'}, key='eval:main:y_logCgg', upstream=['train:main:y_logCgg'])
+check_eval('y_logCgg', '9.7', next_step='Step 9.8')

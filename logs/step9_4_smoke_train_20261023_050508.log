@@ -1,0 +1,60 @@
+=== step9_4_smoke_train | engine mesd_03_train_models.py | code v5 | MESD 5dcc2236ac5b ===
+start 2026-10-23 05:05:08 | work /content/drive/MyDrive/mesd_v1/work/smoke_cgg | settings {'MESD_TARGET': 'y_logCgg', 'MESD_DEBUG': '1'} | GPU Tesla T4, 15360 MiB | RAM 51.0 GB
+Traceback (most recent call last):
+  File "<string>", line 153, in _run_engine
+  File "/content/drive/MyDrive/mesd_v1/code/engine/mesd_03_train_models.py", line 21, in <module>
+    import torch
+  File "/usr/local/lib/python3.13/dist-packages/torch/__init__.py", line 2230, in <module>
+    from torch import _VF as _VF, functional as functional  # usort: skip
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/functional.py", line 8, in <module>
+    import torch.nn.functional as F
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/__init__.py", line 8, in <module>
+    from torch.nn.modules import *  # usort: skip # noqa: F403
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/__init__.py", line 1, in <module>
+    from .module import Module  # usort: skip
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 17, in <module>
+    from torch.utils._python_dispatch import is_traceable_wrapper_subclass
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/__init__.py", line 8, in <module>
+    from torch.utils import (
+    ...<5 lines>...
+    )
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/__init__.py", line 1, in <module>
+    from torch.utils.data.dataloader import (
+    ...<5 lines>...
+    )
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py", line 25, in <module>
+    import torch.distributed as dist
+  File "/usr/local/lib/python3.13/dist-packages/torch/distributed/__init__.py", line 139, in <module>
+    from .device_mesh import DeviceMesh, init_device_mesh
+  File "/usr/local/lib/python3.13/dist-packages/torch/distributed/device_mesh.py", line 44, in <module>
+    from torch.distributed import config as dist_config
+  File "/usr/local/lib/python3.13/dist-packages/torch/distributed/config.py", line 11, in <module>
+    from torch.utils._config_module import Config, install_config_module
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_config_module.py", line 274, in <module>
+    @dataclass
+     ^^^^^^^^^
+  File "/usr/lib/python3.13/dataclasses.py", line 1354, in dataclass
+    return wrap(cls)
+  File "/usr/lib/python3.13/dataclasses.py", line 1344, in wrap
+    return _process_class(cls, init, repr, eq, order, unsafe_hash,
+                          frozen, match_args, kw_only, slots,
+                          weakref_slot)
+  File "/usr/lib/python3.13/dataclasses.py", line 1157, in _process_class
+    func_builder.add_fns_to_class(cls)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/lib/python3.13/dataclasses.py", line 498, in add_fns_to_class
+    exec(txt, self.globals, ns)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 0, in <module>
+KeyboardInterrupt
+
+
+============================== PASTE-BACK FAILURE REPORT: step9_4_smoke_train ==============================
+code v5 | MESD 5dcc2236ac5b | GPU Tesla T4, 15360 MiB | RAM 51.0 GB | settings {'MESD_TARGET': 'y_logCgg', 'MESD_DEBUG': '1'}
+error: KeyboardInterrupt: 
+full log: logs/step9_4_smoke_train_20261023_050508.log (also in records/errors.log)
+Copy the WHOLE cell output above (including the traceback) and paste it back.
+================================================================================

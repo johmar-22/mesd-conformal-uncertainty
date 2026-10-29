@@ -1,0 +1,110 @@
+{
+  "build": {
+    "fp": "3224fc17a075b869",
+    "time": "2026-10-22 20:22:05",
+    "code_version": "v3",
+    "note": "adopted existing outputs (created before checkpoint tracking)"
+  },
+  "splits:main": {
+    "fp": "f1b247947750c745",
+    "time": "2026-10-22 20:22:05",
+    "code_version": "v3",
+    "note": "adopted existing outputs (created before checkpoint tracking)"
+  },
+  "tune": {
+    "fp": "3116c8072848b23d",
+    "time": "2026-10-22 20:22:05",
+    "code_version": "v3",
+    "note": "adopted existing outputs (created before checkpoint tracking)"
+  },
+  "smoke:y_logId": {
+    "fp": "61a7293cc56ddc69",
+    "time": "2026-10-22 20:25:40",
+    "code_version": "v3",
+    "note": ""
+  },
+  "train:main:y_logId": {
+    "fp": "bb26e6aad3018884",
+    "time": "2026-10-23 03:17:28",
+    "code_version": "v3",
+    "note": ""
+  },
+  "eval:main:y_logId": {
+    "fp": "a710298184856e0f",
+    "time": "2026-10-23 12:35:54",
+    "code_version": "v7",
+    "note": ""
+  },
+  "figs:y_logId": {
+    "fp": "94b374adf0c09d9d",
+    "time": "2026-10-23 13:11:20",
+    "code_version": "v8",
+    "note": ""
+  },
+  "smoke:y_logCgg": {
+    "fp": "48bfb77318b7663c",
+    "time": "2026-10-23 05:06:52",
+    "code_version": "v5",
+    "note": ""
+  },
+  "train:main:y_logCgg": {
+    "fp": "324878f2efdf548e",
+    "time": "2026-10-23 12:24:13",
+    "code_version": "v6",
+    "note": ""
+  },
+  "eval:main:y_logCgg": {
+    "fp": "804b110e67fb6a1c",
+    "time": "2026-10-23 12:59:34",
+    "code_version": "v7",
+    "note": ""
+  },
+  "figs:y_logCgg": {
+    "fp": "53a7086d23fb1f24",
+    "time": "2026-10-23 13:12:34",
+    "code_version": "v8",
+    "note": ""
+  },
+  "eval:main:y_logId_ens3": {
+    "fp": "2d81e32f0e244de5",
+    "time": "2026-10-23 13:35:37",
+    "code_version": "v8",
+    "note": ""
+  },
+  "splits:sens_cal10": {
+    "fp": "21e9c35fb31cf6c6",
+    "time": "2026-10-23 13:45:16",
+    "code_version": "v8",
+    "note": ""
+  },
+  "train:sens_cal10:y_logId": {
+    "fp": "b9b38073c655be1f",
+    "time": "2026-10-23 18:39:45",
+    "code_version": "v8",
+    "note": ""
+  },
+  "eval:sens_cal10:y_logId": {
+    "fp": "e289eb0b074ac922",
+    "time": "2026-10-23 18:57:07",
+    "code_version": "v8",
+    "note": ""
+  },
+  "splits:sens_bsim4": {
+    "fp": "2f0a4b537e925da5",
+    "time": "2026-10-23 20:03:54",
+    "code_version": "v9",
+    "note": ""
+  },
+  "train:sens_bsim4:y_logId": {
+    "fp": "db2488d89e3ecb53",
+    "time": "2026-10-23 21:22:39",
+    "code_version": "v9",
+    "note": ""
+  },
+  "eval:sens_bsim4:y_logId": {
+    "fp": "5b1f72019c0d8571",
+    "time": "2026-10-24 06:36:01",
+    "code_version": "v9",
+    "note": ""
+  }
+}

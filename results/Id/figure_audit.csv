@@ -1,0 +1,7 @@
+figure,width_cm,height_cm,canvas_width_cm,n_overlaps,overlaps
+fig1_audit_cgs_artifact,8.39,7.11,8.5,0,
+fig2_coverage_by_method,14.89,9.19,15.0,0,
+fig3_recalibration_budget,8.39,6.52,8.5,0,
+fig5_recalibration_width,14.89,6.19,15.0,0,
+fig4_lopo_coverage_by_pdk,8.39,6.52,8.5,0,
+fig6_curve_coverage,8.39,6.52,8.5,0,

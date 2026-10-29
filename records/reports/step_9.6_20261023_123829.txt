@@ -1,0 +1,26 @@
+STEP 9.6: accuracy gate (go / no-go) for y_logCgg
+code v7 | MESD commit 5dcc2236ac5b5eeb6228503f544053c2a359b636 | 2026-10-23 12:38:27 | GPU Tesla T4, 15360 MiB
+
+--- KEY RESULTS ---
+accuracy of the 5-network ensemble mean on the S0 (random split) TEST curves, y_logCgg:
+                         file  mae_dec  mae_dec_sub  medrel_above
+S0_random__all__seed0.parquet   0.0106       0.0136        0.0156
+S0_random__all__seed1.parquet   0.0137       0.0181        0.0201
+S0_random__all__seed2.parquet   0.0124       0.0147        0.0191
+S0_random__all__seed3.parquet   0.0149       0.0197        0.0219
+S0_random__all__seed4.parquet   0.0145       0.0188        0.0213
+
+mean over seeds: MAE 0.0132 dec | MAE sub 0.0170 dec | median rel. error above Vth 1.96%
+pilot values (plan): MAE 0.028 | MAE sub 0.052 | median rel. error 2.9%
+
+--- COPIED TO DRIVE (figures/ and results/ in /content/drive/MyDrive/mesd_v1) ---
+  figures/Id               12 files
+  results/Id               15 files
+
+--- CHECKS (expected values from the execution plan) ---
+[PASS] S0 seeds available | expected: 5 | got: 5
+[PASS] median relative error above threshold | expected: <= 5% (pilot 2.9%) | got: 1.96%
+[PASS] MAE, all points (decades) | expected: <= 0.05 (pilot 0.028) | got: 0.0132
+[PASS] MAE, subthreshold (decades) | expected: <= 0.10 (pilot 0.052) | got: 0.0170
+
+STEP 9.6 RESULT: PASS (all 4 checks passed) -> you can proceed to Step 9.7.

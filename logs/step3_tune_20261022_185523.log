@@ -1,0 +1,19 @@
+=== step3_tune | engine mesd_03a_tune_hyperparameters.py | code v2 | MESD 5dcc2236ac5b ===
+start 2026-10-22 18:55:23 | work /content/drive/MyDrive/mesd_v1/work/main | settings default | GPU Tesla T4, 15360 MiB | RAM 51.0 GB
+device: cuda
+inner-train curves: 156,581 | inner-val curves: 27,631 | cal/test curves used: 0
+{'epochs': 40, 'lr': 0.002, 'norm_wl': True, 'train_mse_std': 0.0003408729892261739, 'diverged': False, 'val_mae_dec': 0.025819286704063416, 'val_mae_sub': 0.047775182873010635, 'val_medrel_above': 0.027700722217559814, 'minutes': 0.74}
+{'epochs': 40, 'lr': 0.005, 'norm_wl': True, 'train_mse_std': 8.977221372452113e-05, 'diverged': False, 'val_mae_dec': 0.012957952916622162, 'val_mae_sub': 0.022949298843741417, 'val_medrel_above': 0.014968395233154297, 'minutes': 0.67}
+{'epochs': 60, 'lr': 0.003, 'norm_wl': True, 'train_mse_std': 6.81925423104891e-05, 'diverged': False, 'val_mae_dec': 0.0111031923443079, 'val_mae_sub': 0.019682835787534714, 'val_medrel_above': 0.0126265287399292, 'minutes': 1.05}
+{'epochs': 60, 'lr': 0.005, 'norm_wl': True, 'train_mse_std': 3.0386886036200484e-05, 'diverged': False, 'val_mae_dec': 0.007417269982397556, 'val_mae_sub': 0.01289094053208828, 'val_medrel_above': 0.008622229099273682, 'minutes': 1.09}
+{'epochs': 60, 'lr': 0.005, 'norm_wl': False, 'train_mse_std': 0.0008693293517657722, 'diverged': False, 'val_mae_dec': 0.05218365415930748, 'val_mae_sub': 0.06862384080886841, 'val_medrel_above': 0.08262351155281067, 'minutes': 1.08}
+{'epochs': 100, 'lr': 0.005, 'norm_wl': True, 'train_mse_std': 0.0004967711936368445, 'diverged': False, 'val_mae_dec': 0.03438868373632431, 'val_mae_sub': 0.05602700263261795, 'val_medrel_above': 0.04377555847167969, 'minutes': 1.79}
+
+SELECTED: {'epochs': 60, 'lr': 0.005, 'norm_wl': True, 'val_mae_dec': 0.007417269982397556, 'val_medrel_above': 0.008622229099273682, 'selected_on': 'S0_random seed 0, inner validation (15% of train curves)', 'debug': False}
+   epochs     lr  norm_wl  val_mae_dec  val_mae_sub  val_medrel_above  diverged  minutes
+0      40  0.002     True       0.0258       0.0478            0.0277     False     0.74
+1      40  0.005     True       0.0130       0.0229            0.0150     False     0.67
+2      60  0.003     True       0.0111       0.0197            0.0126     False     1.05
+3      60  0.005     True       0.0074       0.0129            0.0086     False     1.09
+4      60  0.005    False       0.0522       0.0686            0.0826     False     1.08
+5     100  0.005     True       0.0344       0.0560            0.0438     False     1.79

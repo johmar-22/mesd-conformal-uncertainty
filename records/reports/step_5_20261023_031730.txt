@@ -1,0 +1,64 @@
+STEP 5: train the surrogates for y_logId
+code v3 | MESD commit 5dcc2236ac5b5eeb6228503f544053c2a359b636 | 2026-10-23 03:17:28 | GPU Tesla T4, 15360 MiB
+
+--- KEY RESULTS ---
+per run (standardized train MSE of the 5 networks; pinball loss of the quantile net):
+   scenario  fold  seed  n_train  n_eval  ens_loss_mean  ens_loss_max  train_loss_q  minutes
+  S0_random   all     0  2235110 1254953        0.00077       0.00167       0.00053     8.57
+  S0_random   all     1  2230847 1259014        0.00031       0.00102       0.00053    10.11
+  S0_random   all     2  2233853 1256218        0.00118       0.00206       0.00058     8.75
+  S0_random   all     3  2233592 1256412        0.00089       0.00198       0.00058     8.68
+  S0_random   all     4  2235977 1254026        0.00088       0.00183       0.00060     8.65
+S1_Lextreme   all     0  2233380 1257120        0.00104       0.00189       0.00042     8.65
+S1_Lextreme   all     1  2233191 1257309        0.00066       0.00148       0.00058     8.65
+S1_Lextreme   all     2  2233278 1257222        0.00167       0.00481       0.00052     8.65
+S1_Lextreme   all     3  2233963 1256537        0.00087       0.00223       0.00051     8.68
+S1_Lextreme   all     4  2231873 1258627        0.00148       0.00353       0.00054     8.68
+    S2_T125   all     0  2235003 1255497        0.00065       0.00124       0.00053     8.74
+    S2_T125   all     1  2232486 1258014        0.00164       0.00476       0.00051     8.67
+    S2_T125   all     2  2234931 1255569        0.00039       0.00089       0.00054    10.12
+    S2_T125   all     3  2235114 1255386        0.00044       0.00092       0.00056     8.70
+    S2_T125   all     4  2234975 1255525        0.00114       0.00370       0.00057     8.69
+      S3_ff   all     0  1898729 1591771        0.00175       0.00676       0.00055     8.59
+      S3_ff   all     1  1894955 1595545        0.00117       0.00258       0.00054     7.36
+      S3_ff   all     2  1894266 1596234        0.00035       0.00130       0.00063     7.37
+      S3_ff   all     3  1895115 1595385        0.00067       0.00225       0.00059     8.56
+      S3_ff   all     4  1898143 1592357        0.00079       0.00096       0.00062     7.38
+    S4_LOPO N180A     0  2633315  857052        0.00076       0.00198       0.00038    10.30
+    S4_LOPO N180B     0  2183849 1306144        0.00061       0.00107       0.00051     8.51
+    S4_LOPO N350A     0  2687525  802711        0.00021       0.00027       0.00043    10.52
+    S4_LOPO  N40A     0  2419655 1070533        0.00046       0.00095       0.00040     9.47
+    S4_LOPO  N45A     0  2660031  830359        0.00037       0.00089       0.00045    12.12
+    S4_LOPO  N45B     0  2396014 1094156        0.00052       0.00094       0.00045     9.46
+    S4_LOPO  N55A     0  2420634 1069554        0.00060       0.00092       0.00046     9.54
+    S4_LOPO  N90A     0  2150889 1339076        0.00079       0.00162       0.00058     9.85
+    S4_LOPO N180A     1  2631426  858941        0.00036       0.00077       0.00039    10.34
+    S4_LOPO N180B     1  2183905 1306088        0.00049       0.00094       0.00053     8.59
+    S4_LOPO N350A     1  2687694  802542        0.00037       0.00078       0.00045    10.63
+    S4_LOPO  N40A     1  2415995 1074193        0.00079       0.00145       0.00042     9.50
+    S4_LOPO  N45A     1  2660228  830162        0.00136       0.00335       0.00042    10.40
+    S4_LOPO  N45B     1  2395349 1094821        0.00039       0.00057       0.00041     9.42
+    S4_LOPO  N55A     1  2416154 1074034        0.00069       0.00196       0.00046    11.02
+    S4_LOPO  N90A     1  2149305 1340660        0.00161       0.00389       0.00051     8.46
+    S4_LOPO N180A     2  2629266  861101        0.00042       0.00135       0.00042    12.08
+    S4_LOPO N180B     2  2184510 1305483        0.00204       0.00440       0.00058     8.64
+    S4_LOPO N350A     2  2686390  803846        0.00036       0.00067       0.00048    10.62
+    S4_LOPO  N40A     2  2418461 1071727        0.00013       0.00031       0.00046    11.07
+    S4_LOPO  N45A     2  2661277  829113        0.00023       0.00046       0.00047    10.49
+    S4_LOPO  N45B     2  2398710 1091460        0.00051       0.00070       0.00052     9.41
+    S4_LOPO  N55A     2  2417962 1072226        0.00133       0.00286       0.00051     9.46
+    S4_LOPO  N90A     2  2150122 1339843        0.00040       0.00071       0.00052     8.37
+
+training time logged: 6.84 h | mean per run 9.3 min
+
+--- CHECKS (expected values from the execution plan) ---
+[PASS] prediction files | expected: 44 runs | got: 44 done
+[PASS] runs with a training record | expected: one per finished run (44) | got: 44
+[PASS] training used the frozen tuning.json | expected: log line 'using tuning.json: ...' | got: found
+[PASS] runs with standardized train MSE > 0.05 (divergence guard limit) | expected: 0 | got: 0
+[WARN] ensemble train loss | expected: near 4e-4 (pilot at 15% of data) | got: max 6.76e-03, median 6.68e-04
+[PASS] finite predictions in the last file | expected: all finite | got: yes
+[PASS] ensemble members per file | expected: 5 | got: 5
+[PASS] rows written | expected: calibration and test only | got: ['cal', 'test']
+
+STEP 5 RESULT: PASS WITH WARNINGS (7 passed, 1 warnings) -> you can proceed to Step 6 (accuracy gate), but paste this log back so the warnings are reviewed.

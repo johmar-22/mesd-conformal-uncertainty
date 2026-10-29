@@ -1,0 +1,42 @@
+STEP 10.4: sensitivity training: BSIM4 PDKs only (S4)
+code v9 | MESD commit 5dcc2236ac5b5eeb6228503f544053c2a359b636 | 2026-10-23 21:22:39 | GPU Tesla T4, 15360 MiB
+
+--- KEY RESULTS ---
+per run (standardized train MSE of the 5 networks; pinball loss of the quantile net):
+scenario  fold  seed  n_train  n_eval  ens_loss_mean  ens_loss_max  train_loss_q  minutes
+ S4_LOPO N180B     0  1278214 1077779        0.00005       0.00006       0.00076     4.31
+ S4_LOPO  N40A     0  1511268  844920        0.00048       0.00173       0.00049     5.25
+ S4_LOPO  N45A     0  1754063  602327        0.00004       0.00004       0.00059     6.17
+ S4_LOPO  N45B     0  1489900  866270        0.00053       0.00245       0.00062     5.19
+ S4_LOPO  N55A     0  1511005  845183        0.00005       0.00006       0.00062     5.29
+ S4_LOPO N180B     1  1276897 1079096        0.00005       0.00006       0.00073     4.46
+ S4_LOPO  N40A     1  1511092  845096        0.00150       0.00629       0.00052     5.28
+ S4_LOPO  N45A     1  1751851  604539        0.00084       0.00232       0.00059     6.13
+ S4_LOPO  N45B     1  1489764  866406        0.00005       0.00005       0.00062     5.22
+ S4_LOPO  N55A     1  1508608  847580        0.00023       0.00099       0.00063     5.27
+ S4_LOPO N180B     2  1277816 1078177        0.00005       0.00006       0.00074     4.46
+ S4_LOPO  N40A     2  1509933  846255        0.00033       0.00106       0.00052     5.22
+ S4_LOPO  N45A     2  1753688  602702        0.00037       0.00100       0.00058     6.09
+ S4_LOPO  N45B     2  1487675  868495        0.00042       0.00175       0.00064     5.12
+ S4_LOPO  N55A     2  1509024  847164        0.00005       0.00005       0.00065     5.25
+
+training time logged: 1.31 h | mean per run 5.2 min
+
+--- COPIED TO DRIVE (figures/ and results/ in /content/drive/MyDrive/mesd_v1) ---
+  figures/Id               12 files
+  results/Id               15 files
+  figures/Cgg              12 files
+  results/Cgg              14 files
+  results/sensitivity      1 files
+
+--- CHECKS (expected values from the execution plan) ---
+[PASS] prediction files | expected: 15 runs | got: 15 done
+[PASS] runs with a training record | expected: one per finished run (15) | got: 15
+[PASS] training used the frozen tuning.json | expected: log line 'using tuning.json: ...' | got: found
+[PASS] runs with standardized train MSE > 0.05 (divergence guard limit) | expected: 0 | got: 0
+[WARN] ensemble train loss | expected: near 4e-4 (pilot at 15% of data) | got: max 6.29e-03, median 2.32e-04
+[PASS] finite predictions in the last file | expected: all finite | got: yes
+[PASS] ensemble members per file | expected: 5 | got: 5
+[PASS] rows written | expected: calibration and test only | got: ['cal', 'test']
+
+STEP 10.4 RESULT: PASS WITH WARNINGS (7 passed, 1 warnings) -> you can proceed to Step 10.5, but paste this log back so the warnings are reviewed.

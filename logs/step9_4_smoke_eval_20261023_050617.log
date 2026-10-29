@@ -1,0 +1,37 @@
+=== step9_4_smoke_eval | engine mesd_04_conformal_eval.py | code v5 | MESD 5dcc2236ac5b ===
+start 2026-10-23 05:06:17 | work /content/drive/MyDrive/mesd_v1/work/smoke_cgg | settings {'MESD_TARGET': 'y_logCgg'} | GPU Tesla T4, 15360 MiB | RAM 51.0 GB
+12 prediction files | ensemble members used: all
+S0_random all 0 | MAE 0.148 dec | AUROC 0.61 | dom-AUC 0.48
+S1_Lextreme all 0 | MAE 0.186 dec | AUROC 0.71 | dom-AUC 1.00
+S2_T125 all 0 | MAE 0.166 dec | AUROC 0.59 | dom-AUC 1.00
+S3_ff all 0 | MAE 0.258 dec | AUROC 0.68 | dom-AUC 1.00
+S4_LOPO N180A 0 | MAE 0.153 dec | AUROC 0.65 | dom-AUC 1.00
+S4_LOPO N180B 0 | MAE 0.384 dec | AUROC 0.68 | dom-AUC 1.00
+S4_LOPO N350A 0 | MAE 0.404 dec | AUROC 0.46 | dom-AUC 1.00
+S4_LOPO N40A 0 | MAE 0.185 dec | AUROC 0.54 | dom-AUC 1.00
+S4_LOPO N45A 0 | MAE 0.203 dec | AUROC 0.50 | dom-AUC 1.00
+S4_LOPO N45B 0 | MAE 0.156 dec | AUROC 0.63 | dom-AUC 1.00
+S4_LOPO N55A 0 | MAE 0.208 dec | AUROC 0.54 | dom-AUC 1.00
+S4_LOPO N90A 0 | MAE 0.165 dec | AUROC 0.47 | dom-AUC 1.00
+12 prediction files | 0 reused from checkpoint | 12 computed now
+method         CQR  Ens-Gauss  Mondrian-region    NCP  Recal-100  Recal-20  Recal-5  RecalNCP-100  RecalNCP-20  RecalNCP-5  SCP-curve  SCP-ens  SCP-single    WCP
+scenario                                                                                                                                                         
+S0_random    0.904      0.387            0.899  0.904      0.897     0.861    0.900         0.887        0.903       0.847      0.992    0.899       0.903  0.913
+S1_Lextreme  0.855      0.394            0.815  0.886      0.890     0.917    0.858         0.902        0.887       0.866      0.990    0.815       0.873  1.000
+S2_T125      0.857      0.388            0.864  0.901      0.890     0.863    0.888         0.894        0.899       0.861      0.993    0.864       0.872  1.000
+S3_ff        0.795      0.482            0.846  0.921      0.894     0.880    0.800         0.896        0.871       0.888      0.991    0.853       0.910  1.000
+S4_LOPO      0.832      0.358            0.801  0.867      0.900     0.895    0.889         0.901        0.882       0.841      0.987    0.804       0.790  1.000
+method         CQR  Ens-Gauss  Mondrian-region    NCP  Recal-100  Recal-20  Recal-5  RecalNCP-100  RecalNCP-20  RecalNCP-5  SCP-curve  SCP-ens  SCP-single    WCP
+scenario                                                                                                                                                         
+S0_random    0.784      0.027            0.650  0.588      0.648     0.561    0.663         0.561        0.598       0.515      0.909    0.648       0.639  0.692
+S1_Lextreme  0.728      0.093            0.520  0.635      0.711     0.779    0.647         0.664        0.636       0.613      0.899    0.548       0.560  1.000
+S2_T125      0.704      0.072            0.630  0.620      0.702     0.647    0.714         0.613        0.619       0.614      0.921    0.626       0.581  1.000
+S3_ff        0.460      0.104            0.639  0.730      0.733     0.706    0.552         0.697        0.653       0.674      0.905    0.646       0.703  1.000
+S4_LOPO      0.654      0.114            0.590  0.545      0.683     0.670    0.697         0.560        0.528       0.498      0.878    0.585       0.570  1.000
+             mae_dec  medrel_above  auroc_sigma_err
+scenario                                           
+S0_random      0.148         0.276            0.613
+S1_Lextreme    0.186         0.353            0.713
+S2_T125        0.166         0.320            0.589
+S3_ff          0.258         0.547            0.676
+S4_LOPO        0.232         0.379            0.559

@@ -1,0 +1,48 @@
+=== step9_8_figures_Cgg | engine mesd_05_figures_tables.py | code v7 | MESD 5dcc2236ac5b ===
+start 2026-10-23 13:02:53 | work /content/drive/MyDrive/mesd_v1/work/main | settings {'MESD_TARGET': 'y_logCgg', 'MESD_FP': '61b98f0d48b11468'} | GPU Tesla T4, 15360 MiB | RAM 51.0 GB
+figure font in use: Liberation Serif
+  fig1_audit_cgs_artifact: 8.39 x 7.11 cm as written (1981 x 1680 px, canvas 8.5 cm wide), font Liberation Serif | overlaps: none
+  fig2_coverage_by_method: 14.89 x 9.19 cm as written (3517 x 2170 px, canvas 15.0 cm wide), font Liberation Serif | overlaps: 4
+      OVERLAP: axes7 'WCP': text '∞' lies on 8 data points
+      OVERLAP: axes7 'WCP': text '∞' lies on 8 data points
+      OVERLAP: axes7 'WCP': text '∞' lies on 8 data points
+      OVERLAP: axes7 'WCP': text '∞' lies on 8 data points
+  fig3_recalibration_budget: 8.39 x 6.52 cm as written (1981 x 1540 px, canvas 8.5 cm wide), font Liberation Serif | overlaps: none
+  fig5_recalibration_width: 14.89 x 6.19 cm as written (3517 x 1462 px, canvas 15.0 cm wide), font Liberation Serif | overlaps: none
+  fig4_lopo_coverage_by_pdk: 8.39 x 6.52 cm as written (1981 x 1540 px, canvas 8.5 cm wide), font Liberation Serif | overlaps: none
+            method  n_folds  median_gap_SCPens  median_gap_method  folds_closer_to_090                       direction   p_raw                    family  p_holm                                                        note
+0        Ens-Gauss        8             0.8206             0.3976                    8     closer to 0.90 than SCP-ens  0.0078  exploratory (unadjusted)     NaN                                                            
+1              WCP        8             0.8206             0.1000                    8     closer to 0.90 than SCP-ens  0.0078  exploratory (unadjusted)     NaN  coverage from infinite intervals; not a usable improvement
+2       SCP-single        8             0.8206             0.7873                    6     closer to 0.90 than SCP-ens  0.1953  exploratory (unadjusted)     NaN                                                            
+3  Mondrian-region        8             0.8206             0.8205                    4     closer to 0.90 than SCP-ens  0.9453  exploratory (unadjusted)     NaN                                                            
+4              NCP        8             0.8206             0.2662                    8     closer to 0.90 than SCP-ens  0.0078                   primary  0.0234                                                            
+5        SCP-curve        8             0.8206             0.0950                    8     closer to 0.90 than SCP-ens  0.0078                   primary  0.0234                                                            
+6              CQR        8             0.8206             0.8624                    1  FARTHER from 0.90 than SCP-ens  0.0391                   primary  0.0391                                                            
+  fig6_curve_coverage: 8.39 x 6.52 cm as written (1981 x 1540 px, canvas 8.5 cm wide), font Liberation Serif | overlaps: none
+            mae_dec        mae_dec_sub        mae_dec_above        medrel_above        auroc_sigma_err        frac_err_gt_flag       
+               mean    std        mean    std          mean    std         mean    std            mean    std             mean    std
+scenario                                                                                                                             
+S0_random     0.013  0.002       0.017  0.003         0.012  0.001        0.020  0.002             NaN    NaN            0.000  0.000
+S1_Lextreme   0.023  0.002       0.029  0.004         0.021  0.001        0.032  0.002           0.733  0.136            0.000  0.000
+S2_T125       0.014  0.002       0.018  0.003         0.012  0.002        0.022  0.003             NaN    NaN            0.000  0.000
+S3_ff         0.082  0.029       0.085  0.026         0.081  0.032        0.188  0.106           0.625  0.244            0.004  0.004
+S4_LOPO       0.193  0.083       0.234  0.121         0.176  0.078        0.399  0.252           0.625  0.118            0.208  0.184
+(no curve-level Vth checks for this target)
+method         CQR  Ens-Gauss  Mondrian-region    NCP  SCP-curve  SCP-ens  SCP-single  WCP
+scenario                                                                                  
+S0_random    0.900      0.821            0.899  0.900      0.991    0.899       0.899  0.9
+S1_Lextreme  0.568      0.746            0.697  0.854      0.983    0.697       0.724  1.0
+S2_T125      0.810      0.846            0.870  0.921      0.994    0.869       0.848  1.0
+S3_ff        0.091      0.952            0.321  0.980      0.999    0.327       0.406  1.0
+S4_LOPO      0.041      0.524            0.080  0.622      0.834    0.081       0.103  1.0
+method    CQR  Ens-Gauss  Mondrian-region    NCP  SCP-curve  SCP-ens  SCP-single  WCP
+fold                                                                                 
+N180A   0.040      0.835            0.176  0.936      0.999    0.178       0.164  1.0
+N180B   0.093      0.922            0.115  0.945      0.996    0.116       0.129  1.0
+N350A   0.035      0.535            0.017  0.743      0.994    0.019       0.025  1.0
+N40A    0.032      0.280            0.047  0.418      0.836    0.047       0.077  1.0
+N45A    0.010      0.115            0.019  0.167      0.340    0.017       0.027  1.0
+N45B    0.050      0.303            0.110  0.407      0.725    0.109       0.096  1.0
+N55A    0.015      0.512            0.083  0.580      0.808    0.080       0.159  1.0
+N90A    0.050      0.692            0.076  0.782      0.971    0.079       0.147  1.0
+saved to /content/drive/MyDrive/mesd_v1/work/main/paper/y_logCgg ['fig1_audit_cgs_artifact.pdf', 'fig1_audit_cgs_artifact.png', 'fig1_audit_cgs_artifact_data.csv', 'fig2_coverage_by_method.pdf', 'fig2_coverage_by_method.png', 'fig2_coverage_by_method_data.csv', 'fig3_recalibration_budget.pdf', 'fig3_recalibration_budget.png', 'fig3_recalibration_budget_data.csv', 'fig4_lopo_coverage_by_pdk.pdf', 'fig4_lopo_coverage_by_pdk.png', 'fig4_lopo_coverage_by_pdk_data.csv', 'fig5_recalibration_width.pdf', 'fig5_recalibration_width.png', 'fig5_recalibration_width_data.csv', 'fig6_curve_coverage.pdf', 'fig6_curve_coverage.png', 'fig6_curve_coverage_data.csv', 'figure_audit.csv', 'table1_accuracy.csv', 'table1b_curve_checks.csv', 'table2_coverage_alpha0.10.csv', 'table3_lopo_coverage_by_pdk.csv', 'table4_lopo_paired_tests.csv']

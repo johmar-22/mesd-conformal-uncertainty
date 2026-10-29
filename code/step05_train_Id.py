@@ -1,0 +1,5 @@
+# Step 5 - full training for log10(Id): 44 runs x (5-network ensemble + quantile net) (GPU; checkpointed per run)
+exec(open(f'{BASE}/code/mesd_common.py').read())
+require('3', '4'); require_gpu('Step 5')
+run_step('step5_train_Id', 'mesd_03_train_models.py', env={'MESD_TARGET': 'y_logId'}, key='train:main:y_logId', upstream=['splits:main', 'tune'])
+check_train('y_logId', '5', next_step='Step 6 (accuracy gate)', log_prefix='step5_train_Id')

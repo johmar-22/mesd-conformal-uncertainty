@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the paper and this repository, and the MESD dataset."
+type: software
+title: "Conformal uncertainty intervals for neural MOSFET models under shift: code, check logs and frozen results"
+version: "v1.0.0"
+authors:
+  - family-names: Omar
+    given-names: Johaimen M.
+    affiliation: "Kastamonu University, Türkiye; Mindanao State University-Main Campus, Philippines"
+  - family-names: Tan
+    given-names: Muhammed
+    affiliation: "Kastamonu University, Türkiye"
+repository-code: "https://github.com/johmar-22/mesd-conformal-uncertainty"
+license: MIT
+keywords:
+  - conformal prediction
+  - uncertainty quantification
+  - MOSFET compact model
+  - neural network surrogate
+  - distribution shift
+  - MESD
+references:
+  - type: article
+    title: "Descriptor: MOSFET electrical simulation dataset (MESD)"
+    authors:
+      - family-names: Zhang
+        given-names: Y.
+      - family-names: Low
+        given-names: K. L.
+      - family-names: Li
+        given-names: L.
+      - family-names: Shao
+        given-names: L.
+      - family-names: Sun
+        given-names: Y.
+      - family-names: Zhao
+        given-names: J.
+      - family-names: Sun
+        given-names: Y.
+      - family-names: Shi
+        given-names: Y.
+      - family-names: Li
+        given-names: Y.
+    journal: "IEEE Data Descriptions"
+    volume: 1
+    start: 27
+    end: 32
+    year: 2024
+    doi: "10.1109/IEEEDATA.2024.3481356"

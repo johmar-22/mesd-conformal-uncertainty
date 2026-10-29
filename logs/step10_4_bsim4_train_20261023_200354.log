@@ -1,0 +1,33 @@
+=== step10_4_bsim4_train | engine mesd_03_train_models.py | code v9 | MESD 5dcc2236ac5b ===
+start 2026-10-23 20:03:54 | work /content/drive/MyDrive/mesd_v1/work/sens_bsim4 | settings {'MESD_TARGET': 'y_logId', 'MESD_SCENARIOS': 'S4_LOPO', 'MESD_FP': 'db2488d89e3ecb53'} | GPU Tesla T4, 15360 MiB | RAM 51.0 GB
+using tuning.json: epochs=60, lr=0.005, norm_wl=True
+device: cuda
+  outdated (amended) run moved to _superseded: S4_LOPO__N180B__seed0.parquet
+  outdated (amended) run moved to _superseded: S4_LOPO__N40A__seed0.parquet
+  outdated (amended) run moved to _superseded: S4_LOPO__N45B__seed0.parquet
+  outdated (amended) run moved to _superseded: S4_LOPO__N55A__seed0.parquet
+  outdated (amended) run moved to _superseded: S4_LOPO__N180B__seed1.parquet
+  outdated (amended) run moved to _superseded: S4_LOPO__N40A__seed1.parquet
+  outdated (amended) run moved to _superseded: S4_LOPO__N45B__seed1.parquet
+  outdated (amended) run moved to _superseded: S4_LOPO__N55A__seed1.parquet
+  outdated (amended) run moved to _superseded: S4_LOPO__N180B__seed2.parquet
+  outdated (amended) run moved to _superseded: S4_LOPO__N40A__seed2.parquet
+  outdated (amended) run moved to _superseded: S4_LOPO__N45B__seed2.parquet
+  outdated (amended) run moved to _superseded: S4_LOPO__N55A__seed2.parquet
+15 runs | 0 already done with the current fingerprint (reused from checkpoint) | 15 to train | fingerprint db2488d89e3ecb53
+{'fp': 'db2488d89e3ecb53', 'scenario': 'S4_LOPO', 'fold': 'N180B', 'seed': 0, 'n_train': 1278214, 'n_eval': 1077779, 'train_loss_ens': [5e-05, 6e-05, 5e-05, 5e-05, 5e-05], 'train_loss_q': 0.00076, 'minutes': 4.31}
+{'fp': 'db2488d89e3ecb53', 'scenario': 'S4_LOPO', 'fold': 'N40A', 'seed': 0, 'n_train': 1511268, 'n_eval': 844920, 'train_loss_ens': [0.0006, 3e-05, 0.00173, 3e-05, 3e-05], 'train_loss_q': 0.00049, 'minutes': 5.25}
+{'fp': 'db2488d89e3ecb53', 'scenario': 'S4_LOPO', 'fold': 'N45A', 'seed': 0, 'n_train': 1754063, 'n_eval': 602327, 'train_loss_ens': [4e-05, 4e-05, 4e-05, 4e-05, 3e-05], 'train_loss_q': 0.00059, 'minutes': 6.17}
+{'fp': 'db2488d89e3ecb53', 'scenario': 'S4_LOPO', 'fold': 'N45B', 'seed': 0, 'n_train': 1489900, 'n_eval': 866270, 'train_loss_ens': [5e-05, 5e-05, 5e-05, 0.00245, 6e-05], 'train_loss_q': 0.00062, 'minutes': 5.19}
+{'fp': 'db2488d89e3ecb53', 'scenario': 'S4_LOPO', 'fold': 'N55A', 'seed': 0, 'n_train': 1511005, 'n_eval': 845183, 'train_loss_ens': [5e-05, 5e-05, 4e-05, 6e-05, 5e-05], 'train_loss_q': 0.00062, 'minutes': 5.29}
+{'fp': 'db2488d89e3ecb53', 'scenario': 'S4_LOPO', 'fold': 'N180B', 'seed': 1, 'n_train': 1276897, 'n_eval': 1079096, 'train_loss_ens': [5e-05, 5e-05, 6e-05, 5e-05, 5e-05], 'train_loss_q': 0.00073, 'minutes': 4.46}
+{'fp': 'db2488d89e3ecb53', 'scenario': 'S4_LOPO', 'fold': 'N40A', 'seed': 1, 'n_train': 1511092, 'n_eval': 845096, 'train_loss_ens': [3e-05, 3e-05, 3e-05, 0.0011, 0.00629], 'train_loss_q': 0.00052, 'minutes': 5.28}
+{'fp': 'db2488d89e3ecb53', 'scenario': 'S4_LOPO', 'fold': 'N45A', 'seed': 1, 'n_train': 1751851, 'n_eval': 604539, 'train_loss_ens': [4e-05, 4e-05, 4e-05, 0.00177, 0.00232], 'train_loss_q': 0.00059, 'minutes': 6.13}
+{'fp': 'db2488d89e3ecb53', 'scenario': 'S4_LOPO', 'fold': 'N45B', 'seed': 1, 'n_train': 1489764, 'n_eval': 866406, 'train_loss_ens': [5e-05, 5e-05, 5e-05, 5e-05, 5e-05], 'train_loss_q': 0.00062, 'minutes': 5.22}
+{'fp': 'db2488d89e3ecb53', 'scenario': 'S4_LOPO', 'fold': 'N55A', 'seed': 1, 'n_train': 1508608, 'n_eval': 847580, 'train_loss_ens': [4e-05, 5e-05, 4e-05, 4e-05, 0.00099], 'train_loss_q': 0.00063, 'minutes': 5.27}
+{'fp': 'db2488d89e3ecb53', 'scenario': 'S4_LOPO', 'fold': 'N180B', 'seed': 2, 'n_train': 1277816, 'n_eval': 1078177, 'train_loss_ens': [6e-05, 5e-05, 6e-05, 5e-05, 5e-05], 'train_loss_q': 0.00074, 'minutes': 4.46}
+{'fp': 'db2488d89e3ecb53', 'scenario': 'S4_LOPO', 'fold': 'N40A', 'seed': 2, 'n_train': 1509933, 'n_eval': 846255, 'train_loss_ens': [2e-05, 3e-05, 0.0005, 3e-05, 0.00106], 'train_loss_q': 0.00052, 'minutes': 5.22}
+{'fp': 'db2488d89e3ecb53', 'scenario': 'S4_LOPO', 'fold': 'N45A', 'seed': 2, 'n_train': 1753688, 'n_eval': 602702, 'train_loss_ens': [4e-05, 0.00076, 3e-05, 3e-05, 0.001], 'train_loss_q': 0.00058, 'minutes': 6.09}
+{'fp': 'db2488d89e3ecb53', 'scenario': 'S4_LOPO', 'fold': 'N45B', 'seed': 2, 'n_train': 1487675, 'n_eval': 868495, 'train_loss_ens': [0.00017, 0.00175, 5e-05, 6e-05, 5e-05], 'train_loss_q': 0.00064, 'minutes': 5.12}
+{'fp': 'db2488d89e3ecb53', 'scenario': 'S4_LOPO', 'fold': 'N55A', 'seed': 2, 'n_train': 1509024, 'n_eval': 847164, 'train_loss_ens': [5e-05, 5e-05, 4e-05, 5e-05, 4e-05], 'train_loss_q': 0.00065, 'minutes': 5.25}
+done

@@ -1,0 +1,8 @@
+# Treat every file as binary: git never converts line endings, so the SHA-256 checksums in
+# CHECKSUMS.sha256 and code/MANIFEST.sha256 stay valid on every operating system.
+* -text
+# Show the repository as Python on GitHub and keep result files out of the language statistics.
+*.py linguist-detectable=true
+results/** linguist-generated=true
+records/** linguist-generated=true
+logs/** linguist-generated=true

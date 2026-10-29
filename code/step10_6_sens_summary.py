@@ -1,0 +1,5 @@
+# Step 10.6 - sensitivity summary: ensemble size, calibration size, coverage level, model family (CPU, minutes)
+exec(open(f'{BASE}/code/mesd_common.py').read())
+require('7')
+run_step('step10_6_sens_summary', 'mesd_06_sensitivity_summary.py')
+check_sens()

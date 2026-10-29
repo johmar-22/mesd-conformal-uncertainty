@@ -1,0 +1,11 @@
+family,scenario,5,20,100
+absolute score,S0_random,0.1314,0.1347,0.1243
+absolute score,S1_Lextreme,0.6546,0.7104,0.6252
+absolute score,S2_T125,0.2483,0.2396,0.2193
+absolute score,S3_ff,2.0151,2.0635,2.1052
+absolute score,S4_LOPO,2.3524,2.2793,2.2795
+normalised (NCP) score,S0_random,0.1015,0.1004,0.0975
+normalised (NCP) score,S1_Lextreme,0.3561,0.3892,0.3843
+normalised (NCP) score,S2_T125,0.1652,0.1576,0.1589
+normalised (NCP) score,S3_ff,2.0307,2.1093,2.1047
+normalised (NCP) score,S4_LOPO,1.7723,1.7302,1.721

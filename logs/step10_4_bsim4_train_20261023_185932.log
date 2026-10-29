@@ -1,0 +1,19 @@
+=== step10_4_bsim4_train | engine mesd_03_train_models.py | code v8 | MESD 5dcc2236ac5b ===
+start 2026-10-23 18:59:32 | work /content/drive/MyDrive/mesd_v1/work/sens_bsim4 | settings {'MESD_TARGET': 'y_logId', 'MESD_SCENARIOS': 'S4_LOPO', 'MESD_FP': '7d919375703638b1'} | GPU Tesla T4, 15360 MiB | RAM 51.0 GB
+using tuning.json: epochs=60, lr=0.005, norm_wl=True
+device: cuda
+12 runs | 0 already done with the current fingerprint (reused from checkpoint) | 12 to train | fingerprint 7d919375703638b1
+{'fp': '7d919375703638b1', 'scenario': 'S4_LOPO', 'fold': 'N180B', 'seed': 0, 'n_train': 1144772, 'n_eval': 1046221, 'train_loss_ens': [7e-05, 6e-05, 7e-05, 7e-05, 6e-05], 'train_loss_q': 0.00078, 'minutes': 3.8}
+{'fp': '7d919375703638b1', 'scenario': 'S4_LOPO', 'fold': 'N40A', 'seed': 0, 'n_train': 1378995, 'n_eval': 812193, 'train_loss_ens': [0.00127, 3e-05, 3e-05, 0.00694, 4e-05], 'train_loss_q': 0.00056, 'minutes': 4.8}
+{'fp': '7d919375703638b1', 'scenario': 'S4_LOPO', 'fold': 'N45B', 'seed': 0, 'n_train': 1357689, 'n_eval': 833481, 'train_loss_ens': [6e-05, 6e-05, 5e-05, 6e-05, 6e-05], 'train_loss_q': 0.00065, 'minutes': 4.72}
+{'fp': '7d919375703638b1', 'scenario': 'S4_LOPO', 'fold': 'N55A', 'seed': 0, 'n_train': 1379298, 'n_eval': 811890, 'train_loss_ens': [6e-05, 6e-05, 6e-05, 7e-05, 7e-05], 'train_loss_q': 0.00066, 'minutes': 4.81}
+{'fp': '7d919375703638b1', 'scenario': 'S4_LOPO', 'fold': 'N180B', 'seed': 1, 'n_train': 1144099, 'n_eval': 1046894, 'train_loss_ens': [7e-05, 7e-05, 7e-05, 8e-05, 7e-05], 'train_loss_q': 0.00077, 'minutes': 3.97}
+{'fp': '7d919375703638b1', 'scenario': 'S4_LOPO', 'fold': 'N40A', 'seed': 1, 'n_train': 1378313, 'n_eval': 812875, 'train_loss_ens': [3e-05, 3e-05, 3e-05, 3e-05, 3e-05], 'train_loss_q': 0.00056, 'minutes': 4.8}
+{'fp': '7d919375703638b1', 'scenario': 'S4_LOPO', 'fold': 'N45B', 'seed': 1, 'n_train': 1359238, 'n_eval': 831932, 'train_loss_ens': [5e-05, 6e-05, 5e-05, 6e-05, 5e-05], 'train_loss_q': 0.00067, 'minutes': 4.73}
+{'fp': '7d919375703638b1', 'scenario': 'S4_LOPO', 'fold': 'N55A', 'seed': 1, 'n_train': 1378581, 'n_eval': 812607, 'train_loss_ens': [6e-05, 6e-05, 5e-05, 6e-05, 0.00831], 'train_loss_q': 0.00065, 'minutes': 4.8}
+{'fp': '7d919375703638b1', 'scenario': 'S4_LOPO', 'fold': 'N180B', 'seed': 2, 'n_train': 1144664, 'n_eval': 1046329, 'train_loss_ens': [8e-05, 7e-05, 6e-05, 6e-05, 7e-05], 'train_loss_q': 0.00083, 'minutes': 3.98}
+  loss 1.0000 too high at lr=0.005; retraining with lr=0.0025
+{'fp': '7d919375703638b1', 'scenario': 'S4_LOPO', 'fold': 'N40A', 'seed': 2, 'n_train': 1378138, 'n_eval': 813050, 'train_loss_ens': [7e-05, 3e-05, 3e-05, 3e-05, 0.00078], 'train_loss_q': 0.00058, 'minutes': 5.57}
+{'fp': '7d919375703638b1', 'scenario': 'S4_LOPO', 'fold': 'N45B', 'seed': 2, 'n_train': 1356519, 'n_eval': 834651, 'train_loss_ens': [0.00232, 5e-05, 4e-05, 5e-05, 5e-05], 'train_loss_q': 0.00068, 'minutes': 4.74}
+{'fp': '7d919375703638b1', 'scenario': 'S4_LOPO', 'fold': 'N55A', 'seed': 2, 'n_train': 1379364, 'n_eval': 811824, 'train_loss_ens': [6e-05, 6e-05, 6e-05, 6e-05, 6e-05], 'train_loss_q': 0.00068, 'minutes': 4.81}
+done

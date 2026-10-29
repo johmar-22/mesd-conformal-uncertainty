@@ -1,0 +1,6 @@
+scenario,nonmono_pred_above,nonmono_true_above,nonmono_pred_all,nonmono_true_all,vth_err_mV,vth_covered,vth_width_mV,vth_covered_pointwise
+S0_random,0.0,0.0,0.142,0.1,4.063,0.995,39.075,0.84
+S1_Lextreme,0.001,0.0,0.114,0.117,30.121,0.819,96.994,0.4
+S2_T125,0.001,0.0,0.04,0.004,6.897,0.995,70.059,0.702
+S3_ff,0.0,0.0,0.009,0.083,80.155,0.556,178.222,0.016
+S4_LOPO,0.015,0.0,0.109,0.101,81.528,0.802,252.967,0.065

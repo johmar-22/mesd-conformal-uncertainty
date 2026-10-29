@@ -1,0 +1,46 @@
+=== step9_4_smoke_figures | engine mesd_05_figures_tables.py | code v5 | MESD 5dcc2236ac5b ===
+start 2026-10-23 05:06:37 | work /content/drive/MyDrive/mesd_v1/work/smoke_cgg | settings {'MESD_TARGET': 'y_logCgg'} | GPU Tesla T4, 15360 MiB | RAM 51.0 GB
+figure font in use: Liberation Serif
+  fig1_audit_cgs_artifact: 8.5 x 7.23 cm, 2008 x 1707 px, font Liberation Serif
+  fig2_coverage_by_method: 15.0 x 9.3 cm, 3543 x 2197 px, font Liberation Serif
+  fig3_recalibration_budget: 8.5 x 6.63 cm, 2008 x 1566 px, font Liberation Serif
+  fig5_recalibration_width: 15.0 x 6.3 cm, 3543 x 1488 px, font Liberation Serif
+  fig4_lopo_coverage_by_pdk: 8.5 x 6.63 cm, 2008 x 1566 px, font Liberation Serif
+            method  n_folds  median_gap_SCPens  median_gap_method  folds_closer_to_090                       direction   p_raw                    family  p_holm                                                        note
+0        Ens-Gauss        8             0.1354             0.6306                    1  FARTHER from 0.90 than SCP-ens  0.0156  exploratory (unadjusted)     NaN                                                            
+1              WCP        8             0.1354             0.1000                    4     closer to 0.90 than SCP-ens  0.3125  exploratory (unadjusted)     NaN  coverage from infinite intervals; not a usable improvement
+2  Mondrian-region        8             0.1354             0.1312                    6     closer to 0.90 than SCP-ens  0.3828  exploratory (unadjusted)     NaN                                                            
+3       SCP-single        8             0.1354             0.1242                    4     closer to 0.90 than SCP-ens  1.0000  exploratory (unadjusted)     NaN                                                            
+4              NCP        8             0.1354             0.0635                    6     closer to 0.90 than SCP-ens  0.1953                   primary  0.5859                                                            
+5              CQR        8             0.1354             0.0814                    6     closer to 0.90 than SCP-ens  0.3125                   primary  0.6250                                                            
+6        SCP-curve        8             0.1354             0.0914                    4     closer to 0.90 than SCP-ens  0.3125                   primary  0.6250                                                            
+  fig6_curve_coverage: 8.5 x 6.63 cm, 2008 x 1566 px, font Liberation Serif
+            mae_dec        mae_dec_sub        mae_dec_above        medrel_above        auroc_sigma_err        frac_err_gt_flag       
+               mean    std        mean    std          mean    std         mean    std            mean    std             mean    std
+scenario                                                                                                                             
+S0_random     0.148    NaN       0.147    NaN         0.148    NaN        0.276    NaN           0.613    NaN            0.108    NaN
+S1_Lextreme   0.186    NaN       0.156    NaN         0.198    NaN        0.353    NaN           0.713    NaN            0.199    NaN
+S2_T125       0.166    NaN       0.157    NaN         0.169    NaN        0.320    NaN           0.589    NaN            0.145    NaN
+S3_ff         0.258    NaN       0.260    NaN         0.258    NaN        0.547    NaN           0.676    NaN            0.345    NaN
+S4_LOPO       0.232  0.102       0.231  0.071         0.226  0.125        0.379  0.141           0.559  0.085            0.272  0.171
+Empty DataFrame
+Columns: [nonmono_pred_above, nonmono_true_above, nonmono_pred_all, nonmono_true_all, vth_err_mV, vth_covered, vth_width_mV, vth_covered_pointwise]
+Index: []
+method         CQR  Ens-Gauss  Mondrian-region    NCP  SCP-curve  SCP-ens  SCP-single    WCP
+scenario                                                                                    
+S0_random    0.904      0.387            0.899  0.904      0.992    0.899       0.903  0.913
+S1_Lextreme  0.855      0.394            0.815  0.886      0.990    0.815       0.873  1.000
+S2_T125      0.857      0.388            0.864  0.901      0.993    0.864       0.872  1.000
+S3_ff        0.795      0.482            0.846  0.921      0.991    0.853       0.910  1.000
+S4_LOPO      0.832      0.358            0.801  0.867      0.987    0.804       0.790  1.000
+method    CQR  Ens-Gauss  Mondrian-region    NCP  SCP-curve  SCP-ens  SCP-single  WCP
+fold                                                                                 
+N180A   0.983      0.530            0.982  0.950      0.993    0.985       0.950  1.0
+N180B   0.780      0.410            0.533  0.957      0.997    0.535       0.450  1.0
+N350A   0.821      0.089            0.691  0.708      0.967    0.684       0.679  1.0
+N40A    0.950      0.283            0.693  0.847      0.990    0.714       0.748  1.0
+N45A    0.524      0.256            0.968  0.944      0.995    0.977       0.945  1.0
+N45B    0.794      0.894            0.976  0.990      0.999    0.978       0.996  1.0
+N55A    0.895      0.204            0.720  0.830      0.988    0.714       0.750  1.0
+N90A    0.912      0.198            0.843  0.707      0.968    0.843       0.802  1.0
+saved to /content/drive/MyDrive/mesd_v1/work/smoke_cgg/paper/y_logCgg ['fig1_audit_cgs_artifact.pdf', 'fig1_audit_cgs_artifact.png', 'fig1_audit_cgs_artifact_data.csv', 'fig2_coverage_by_method.pdf', 'fig2_coverage_by_method.png', 'fig2_coverage_by_method_data.csv', 'fig3_recalibration_budget.pdf', 'fig3_recalibration_budget.png', 'fig3_recalibration_budget_data.csv', 'fig4_lopo_coverage_by_pdk.pdf', 'fig4_lopo_coverage_by_pdk.png', 'fig4_lopo_coverage_by_pdk_data.csv', 'fig5_recalibration_width.pdf', 'fig5_recalibration_width.png', 'fig5_recalibration_width_data.csv', 'fig6_curve_coverage.pdf', 'fig6_curve_coverage.png', 'fig6_curve_coverage_data.csv', 'table1_accuracy.csv', 'table1b_curve_checks.csv', 'table2_coverage_alpha0.10.csv', 'table3_lopo_coverage_by_pdk.csv', 'table4_lopo_paired_tests.csv']

@@ -1,0 +1,9 @@
+{
+  "epochs": 60,
+  "lr": 0.005,
+  "norm_wl": true,
+  "val_mae_dec": 0.007417269982397556,
+  "val_medrel_above": 0.008622229099273682,
+  "selected_on": "S0_random seed 0, inner validation (15% of train curves)",
+  "debug": false
+}

@@ -1,0 +1,113 @@
+# Paste each block into its OWN Colab cell. Step 0.0a is for the very first session only.
+# Every later session starts with Step 0.0. Full guidance: README.md, Section 4.
+# Rerunning from the GitHub repository: use colab/00_setup_from_github.py instead of Step 0.0a.
+
+# Step 0.0a - FIRST RUN ONLY: unpacks 00a_bootstrap.py from the newest execution_plan_mesd_v*_code.zip in MyDrive, then runs it
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+import glob, os, re, zipfile; zs = sorted(glob.glob('/content/drive/MyDrive/execution_plan_mesd_v*_code.zip'), key=lambda p: [int(n) for n in re.findall(r'\d+', os.path.basename(p))]); z = zipfile.ZipFile(zs[-1]); m = [n for n in z.namelist() if n.endswith('code/00a_bootstrap.py')][0]; os.makedirs(f'{BASE}/code', exist_ok=True); open(f'{BASE}/code/00a_bootstrap.py', 'wb').write(z.read(m)); print('bootstrap taken from', zs[-1]); exec(open(f'{BASE}/code/00a_bootstrap.py').read())
+
+# Step 0.0 - bootstrap: installs the newest execution_plan_mesd_v*_code.zip found in MyDrive
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/00a_bootstrap.py').read())
+
+# Step 1 - clone MESD (pinned commit), build the table, data audit
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step01_build_audit.py').read())
+
+# Step 2 - features, device anchors, shift splits
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step02_features_splits.py').read())
+
+# Step 3 - hyperparameters on inner-validation curves (tuning.json)
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step03_tune.py').read())
+
+# Step 4 - smoke test of the whole pipeline (3% of curves, 2 epochs)
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step04_smoke_Id.py').read())
+
+# Step 5 - full training, log10(Id), 44 runs (resumable)
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step05_train_Id.py').read())
+
+# Step 6 - accuracy gate (go / no-go) on S0, log10(Id)
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step06_gate_Id.py').read())
+
+# Step 7 - conformal and uncertainty evaluation, log10(Id)
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step07_eval_Id.py').read())
+
+# Step 8 - tables, figures and hypothesis decisions, log10(Id)
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step08_figures_Id.py').read())
+
+# Step 9.4 - smoke test, log10(Cgg)
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step09_4_smoke_Cgg.py').read())
+
+# Step 9.5 - full training, log10(Cgg), 44 runs (resumable)
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step09_5_train_Cgg.py').read())
+
+# Step 9.6 - accuracy gate on S0, log10(Cgg)
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step09_6_gate_Cgg.py').read())
+
+# Step 9.7 - conformal and uncertainty evaluation, log10(Cgg)
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step09_7_eval_Cgg.py').read())
+
+# Step 9.8 - tables and figures, log10(Cgg)
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step09_8_figures_Cgg.py').read())
+
+# Step 10.1 - sensitivity: ensemble size 3 instead of 5
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step10_1_sens_ensemble.py').read())
+
+# Step 10.2 - sensitivity: calibration fraction 0.10, training S0 + S4 (29 runs)
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step10_2_sens_calfrac_train.py').read())
+
+# Step 10.3 - sensitivity: calibration fraction 0.10, evaluation
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step10_3_sens_calfrac_eval.py').read())
+
+# Step 10.4 - sensitivity: BSIM4 PDKs only (5 PDKs), training S4 (15 runs)
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step10_4_sens_bsim4_train.py').read())
+
+# Step 10.5 - sensitivity: BSIM4 PDKs only, evaluation
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step10_5_sens_bsim4_eval.py').read())
+
+# Step 10.6 - sensitivity summary (incl. coverage level)
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step10_6_sens_summary.py').read())
+
+# Step 11 - FINAL_SUMMARY.md and frozen export zip
+from google.colab import drive; drive.mount('/content/drive')
+BASE = '/content/drive/MyDrive/mesd_v1'
+exec(open(f'{BASE}/code/step11_export.py').read())

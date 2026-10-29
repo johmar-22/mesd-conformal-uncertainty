@@ -1,0 +1,24 @@
+STEP 3: select hyperparameters on inner validation curves
+code v2 | MESD commit 5dcc2236ac5b5eeb6228503f544053c2a359b636 | 2026-10-22 19:01:51 | GPU Tesla T4, 15360 MiB
+
+--- KEY RESULTS ---
+tuning grid (inner validation = 15% of S0 seed-0 TRAINING curves; no calibration or test curve used):
+ epochs    lr  norm_wl  train_mse_std  diverged  val_mae_dec  val_mae_sub  val_medrel_above  minutes
+     40 0.002     True         0.0003     False       0.0258       0.0478            0.0277     0.74
+     40 0.005     True         0.0001     False       0.0130       0.0229            0.0150     0.67
+     60 0.003     True         0.0001     False       0.0111       0.0197            0.0126     1.05
+     60 0.005     True         0.0000     False       0.0074       0.0129            0.0086     1.09
+     60 0.005    False         0.0009     False       0.0522       0.0686            0.0826     1.08
+    100 0.005     True         0.0005     False       0.0344       0.0560            0.0438     1.79
+
+selected and frozen in tuning.json: {'epochs': 60, 'lr': 0.005, 'norm_wl': True, 'val_mae_dec': 0.007417269982397556, 'val_medrel_above': 0.008622229099273682, 'selected_on': 'S0_random seed 0, inner validation (15% of train curves)', 'debug': False}
+
+--- CHECKS (expected values from the execution plan) ---
+[PASS] tuning.json comes from a full (non-debug) run | expected: debug = False | got: False
+[PASS] selected configuration diverged | expected: False | got: False
+[WARN] winning configuration | expected: 100 epochs, lr 5e-3, W/L normalisation (CPU tuning test) | got: 60 epochs, lr 0.005, norm_wl True | if not: not an error: the grid decides; report the chosen values
+[PASS] validation MAE (decades) | expected: near 0.03 (gate on S0 later: <= 0.05) | got: 0.0074
+[PASS] validation median relative error above Vth | expected: near 3-4% (gate: <= 5%) | got: 0.86%
+[PASS] 40 epochs at 2e-3 is clearly worse | expected: several times worse than the winner | got: 0.0258 vs 0.0074
+
+STEP 3 RESULT: PASS WITH WARNINGS (5 passed, 1 warnings) -> you can proceed to Step 4, but paste this log back so the warnings are reviewed.

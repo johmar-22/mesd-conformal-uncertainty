@@ -1,0 +1,22 @@
+STEP 6: accuracy gate (go / no-go) for y_logId
+code v3 | MESD commit 5dcc2236ac5b5eeb6228503f544053c2a359b636 | 2026-10-23 03:54:15 | GPU Tesla T4, 15360 MiB
+
+--- KEY RESULTS ---
+accuracy of the 5-network ensemble mean on the S0 (random split) TEST curves, y_logId:
+                         file  mae_dec  mae_dec_sub  medrel_above
+S0_random__all__seed0.parquet   0.0261       0.0423        0.0341
+S0_random__all__seed1.parquet   0.0158       0.0264        0.0197
+S0_random__all__seed2.parquet   0.0350       0.0585        0.0436
+S0_random__all__seed3.parquet   0.0314       0.0523        0.0387
+S0_random__all__seed4.parquet   0.0310       0.0505        0.0388
+
+mean over seeds: MAE 0.0278 dec | MAE sub 0.0460 dec | median rel. error above Vth 3.50%
+pilot values (plan): MAE 0.028 | MAE sub 0.052 | median rel. error 2.9%
+
+--- CHECKS (expected values from the execution plan) ---
+[PASS] S0 seeds available | expected: 5 | got: 5
+[PASS] median relative error above threshold | expected: <= 5% (pilot 2.9%) | got: 3.50%
+[PASS] MAE, all points (decades) | expected: <= 0.05 (pilot 0.028) | got: 0.0278
+[PASS] MAE, subthreshold (decades) | expected: <= 0.10 (pilot 0.052) | got: 0.0460
+
+STEP 6 RESULT: PASS (all 4 checks passed) -> you can proceed to Step 7.

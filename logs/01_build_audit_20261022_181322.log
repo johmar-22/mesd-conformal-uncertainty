@@ -1,0 +1,111 @@
+=== 01_build_audit | engine mesd_01_build_and_audit.py | code v1 | MESD not-yet-reco ===
+start 2026-10-22 18:13:22 | work /content/drive/MyDrive/mesd_v1/work/main | settings default | GPU none | RAM 12.7 GB
+MESD commit in use: 5dcc2236ac5b5eeb6228503f544053c2a359b636
+parsed N15A-nmos1.json 1125
+parsed N15A-pmos1.json 1125
+parsed N180A-nmos1.json 228000
+parsed N180A-pmos1.json 228000
+parsed N180B-nmos1.json 228000
+parsed N180B-nmos2.json 234000
+parsed N180B-pmos1.json 228000
+parsed N180B-pmos2.json 234000
+parsed N350A-nmos1.json 72000
+parsed N350A-pmos1.json 72000
+parsed N3A-nmos1.json 1600
+parsed N3A-pmos1.json 1600
+parsed N40A-nmos1.json 97500
+parsed N40A-nmos2.json 97500
+parsed N40A-nmos3.json 97500
+parsed N40A-pmos1.json 97500
+parsed N40A-pmos2.json 97500
+parsed N40A-pmos3.json 97500
+parsed N45A-nmos1.json 99000
+parsed N45A-pmos1.json 99000
+parsed N45B-nmos1.json 99000
+parsed N45B-nmos2.json 99000
+parsed N45B-nmos3.json 99000
+parsed N45B-pmos1.json 99000
+parsed N45B-pmos2.json 99000
+parsed N45B-pmos3.json 99000
+parsed N55A-nmos1.json 97500
+parsed N55A-nmos2.json 97500
+parsed N55A-nmos3.json 97500
+parsed N55A-pmos1.json 97500
+parsed N55A-pmos2.json 97500
+parsed N55A-pmos3.json 97500
+parsed N7A-nmos1.json 4800
+parsed N7A-nmos2.json 4800
+parsed N7A-nmos3.json 4800
+parsed N7A-pmos1.json 4800
+parsed N7A-pmos2.json 4800
+parsed N7A-pmos3.json 4800
+parsed N90A-nmos1.json 99000
+parsed N90A-nmos2.json 99000
+parsed N90A-nmos3.json 189000
+parsed N90A-pmos1.json 99000
+parsed N90A-pmos2.json 99000
+parsed N90A-pmos3.json 346500
+rows (bias points): 4,451,750 | curves: 305,750
+       curves  points  corners  temps
+pdk                                  
+N15A      250    2250        1      5
+N3A       400    3200        1      5
+N7A      3600   28800        3      5
+N350A   12000  144000        1      5
+N45A    18000  198000        3      5
+N180A   24000  456000        3      5
+N180B   42000  924000        3      5
+N40A    45000  585000        3      5
+N55A    45000  585000        3      5
+N45B    54000  594000        3      5
+N90A    61500  931500        3      5
+
+Files whose terminal caps (Cgs/Cgd) violate charge conservation in >10% of curves: 42 of 44
+Median ratio Cgs / (gm/2*pi*f) over violating curves (1.0 => Cgs field is a gm artifact):
+            file  frac_cap_conservation_violated  median_Cgs_over_gm_div_omega
+ N15A-nmos1.json                           0.800                         1.006
+ N15A-pmos1.json                           0.800                         1.005
+N180A-nmos1.json                           0.875                         1.002
+N180A-pmos1.json                           0.875                         1.002
+N180B-nmos1.json                           0.875                         1.002
+N180B-nmos2.json                           0.833                         1.001
+N180B-pmos1.json                           0.875                         1.001
+N180B-pmos2.json                           0.833                         1.001
+N350A-nmos1.json                           0.909                         1.004
+N350A-pmos1.json                           0.884                         1.007
+  N3A-nmos1.json                           0.875                         0.940
+  N3A-pmos1.json                           0.875                         1.004
+ N40A-nmos1.json                           0.780                         1.003
+ N40A-nmos2.json                           0.780                         1.004
+ N40A-nmos3.json                           0.780                         1.003
+ N40A-pmos1.json                           0.715                         1.004
+ N40A-pmos2.json                           0.714                         1.004
+ N40A-pmos3.json                           0.712                         1.003
+ N45A-nmos1.json                           0.000                           NaN
+ N45A-pmos1.json                           0.000                           NaN
+ N45B-nmos1.json                           0.833                         0.961
+ N45B-nmos2.json                           0.833                         0.944
+ N45B-nmos3.json                           0.833                         0.991
+ N45B-pmos1.json                           0.833                         1.001
+ N45B-pmos2.json                           0.833                         1.003
+ N45B-pmos3.json                           0.833                         1.001
+ N55A-nmos1.json                           0.781                         1.002
+ N55A-nmos2.json                           0.745                         1.007
+ N55A-nmos3.json                           0.786                         1.001
+ N55A-pmos1.json                           0.735                         1.005
+ N55A-pmos2.json                           0.689                         1.005
+ N55A-pmos3.json                           0.768                         1.002
+  N7A-nmos1.json                           0.875                         0.833
+  N7A-nmos2.json                           0.875                         0.948
+  N7A-nmos3.json                           0.875                         0.980
+  N7A-pmos1.json                           0.875                         0.879
+  N7A-pmos2.json                           0.875                         0.945
+  N7A-pmos3.json                           0.875                         0.957
+ N90A-nmos1.json                           0.833                         1.003
+ N90A-nmos2.json                           0.833                         1.002
+ N90A-nmos3.json                           0.833                         1.000
+ N90A-pmos1.json                           0.833                         1.003
+ N90A-pmos2.json                           0.833                         1.003
+ N90A-pmos3.json                           0.909                         1.000
+
+Monte Carlo files present: False

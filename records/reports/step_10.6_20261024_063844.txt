@@ -1,0 +1,77 @@
+STEP 10.6: sensitivity analyses summary
+code v9 | MESD commit 5dcc2236ac5b5eeb6228503f544053c2a359b636 | 2026-10-24 06:38:44 | GPU Tesla T4, 15360 MiB
+
+--- KEY RESULTS ---
+
+--- sens_coverage_level.csv ---
+,,coverage,coverage,coverage,rank,rank,rank
+alpha,,0.05,0.1,0.2,0.05,0.1,0.2
+scenario,method,,,,,,
+S0_random,CQR,,0.9,,,1.0,
+S0_random,Mondrian-region,0.95,0.899,0.799,1.0,4.0,3.0
+S0_random,NCP,0.95,0.9,0.8,2.0,3.0,1.0
+S0_random,SCP-curve,0.995,0.99,0.977,4.0,5.0,4.0
+S0_random,SCP-ens,0.95,0.9,0.799,3.0,2.0,2.0
+S1_Lextreme,CQR,,0.409,,,5.0,
+S1_Lextreme,Mondrian-region,0.666,0.58,0.468,4.0,4.0,4.0
+S1_Lextreme,NCP,0.798,0.724,0.615,2.0,2.0,2.0
+S1_Lextreme,SCP-curve,0.935,0.904,0.858,1.0,1.0,1.0
+S1_Lextreme,SCP-ens,0.707,0.611,0.485,3.0,3.0,3.0
+S2_T125,CQR,,0.61,,,5.0,
+S2_T125,Mondrian-region,0.854,0.769,0.634,4.0,4.0,4.0
+S2_T125,NCP,0.928,0.879,0.784,1.0,1.0,1.0
+S2_T125,SCP-curve,0.98,0.972,0.957,2.0,2.0,3.0
+S2_T125,SCP-ens,0.873,0.795,0.659,3.0,3.0,2.0
+S3_ff,CQR,,0.035,,,5.0,
+S3_ff,Mondrian-region,0.134,0.099,0.068,4.0,4.0,4.0
+S3_ff,NCP,0.559,0.493,0.407,2.0,2.0,2.0
+S3_ff,SCP-curve,0.758,0.701,0.633,1.0,1.0,1.0
+S3_ff,SCP-ens,0.183,0.132,0.085,3.0,3.0,3.0
+S4_LOPO,CQR,,0.037,,,5.0,
+S4_LOPO,Mondrian-region,0.118,0.089,0.063,4.0,4.0,4.0
+S4_LOPO,NCP,0.707,0.628,0.52,2.0,2.0,2.0
+S4_LOPO,SCP-curve,0.865,0.825,0.775,1.0,1.0,1.0
+S4_LOPO,SCP-ens,0.154,0.108,0.071,3.0,3.0,3.0
+
+
+--- sens_ensemble_and_calibration_size.csv ---
+scenario,method,main:coverage,main:curve_coverage,main:width_median,ens3:coverage,ens3:curve_coverage,ens3:width_median,cal10:coverage,cal10:curve_coverage,cal10:width_median,delta_cov_ens3,delta_curvecov_ens3,delta_cov_cal10,delta_curvecov_cal10
+S0_random,CQR,0.9,0.358,0.012,0.9,0.358,0.012,0.9,0.363,0.011,0.0,0.0,0.0,0.005
+S0_random,Mondrian-region,0.899,0.507,0.09,0.899,0.483,0.088,0.899,0.495,0.069,0.0,-0.024,0.0,-0.012
+S0_random,NCP,0.9,0.409,0.098,0.9,0.355,0.113,0.899,0.408,0.079,0.0,-0.054,-0.001,-0.001
+S0_random,SCP-curve,0.99,0.899,0.202,0.992,0.901,0.423,0.989,0.898,0.173,0.002,0.002,-0.001,-0.001
+S0_random,SCP-ens,0.9,0.427,0.123,0.899,0.418,0.118,0.9,0.415,0.097,-0.001,-0.009,0.0,-0.012
+S4_LOPO,CQR,0.037,0.0,0.033,0.037,0.0,0.033,0.03,0.0,0.047,0.0,0.0,-0.007,0.0
+S4_LOPO,Mondrian-region,0.089,0.0,0.074,0.094,0.0,0.079,0.071,0.0,0.053,0.005,0.0,-0.018,0.0
+S4_LOPO,NCP,0.628,0.265,0.799,0.625,0.235,0.967,0.595,0.221,0.837,-0.003,-0.03,-0.033,-0.044
+S4_LOPO,SCP-curve,0.825,0.541,1.56,0.893,0.619,3.256,0.809,0.521,1.649,0.068,0.078,-0.016,-0.02
+S4_LOPO,SCP-ens,0.108,0.0,0.103,0.112,0.0,0.109,0.086,0.0,0.073,0.004,0.0,-0.022,0.0
+
+
+--- sens_model_family_bsim4.csv ---
+,main (8 PDKs in training pool),main (8 PDKs in training pool),main (8 PDKs in training pool),main (8 PDKs in training pool),main (8 PDKs in training pool),BSIM4 only (5 PDKs),BSIM4 only (5 PDKs),BSIM4 only (5 PDKs),BSIM4 only (5 PDKs),BSIM4 only (5 PDKs)
+method,CQR,Mondrian-region,NCP,SCP-curve,SCP-ens,CQR,Mondrian-region,NCP,SCP-curve,SCP-ens
+fold,,,,,,,,,,
+N180B,0.042,0.073,0.746,0.859,0.091,0.149,0.008,0.648,0.871,0.011
+N40A,0.031,0.114,0.672,0.888,0.137,0.039,0.125,0.424,0.722,0.144
+N45A,0.007,0.052,0.322,0.522,0.055,0.059,0.024,0.574,0.855,0.025
+N45B,0.026,0.093,0.509,0.804,0.115,0.032,0.063,0.322,0.612,0.078
+N55A,0.036,0.149,0.715,0.897,0.176,0.048,0.079,0.679,0.939,0.098
+mean,0.029,0.096,0.593,0.794,0.115,0.065,0.06,0.529,0.8,0.071
+
+
+--- COPIED TO DRIVE (figures/ and results/ in /content/drive/MyDrive/mesd_v1) ---
+  figures/Id               12 files
+  results/Id               15 files
+  figures/Cgg              12 files
+  results/Cgg              14 files
+  results/sensitivity      5 files
+
+--- CHECKS (expected values from the execution plan) ---
+[PASS] sensitivity analysis: ensemble size + calibration size | expected: table written | got: yes
+[PASS] sensitivity analysis: coverage level | expected: table written | got: yes
+[PASS] sensitivity analysis: model family (BSIM4 only) | expected: table written | got: yes
+[WARN] largest coverage change (delta_cov_ens3) | expected: <= 0.05 (conclusions robust) | got: 0.068 | if not: not an error: report the sensitivity in the supplement
+[PASS] largest coverage change (delta_cov_cal10) | expected: <= 0.05 (conclusions robust) | got: 0.033
+
+STEP 10.6 RESULT: PASS WITH WARNINGS (4 passed, 1 warnings) -> you can proceed to Step 11, but paste this log back so the warnings are reviewed.

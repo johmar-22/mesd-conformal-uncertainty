@@ -1,0 +1,8 @@
+,mae_dec,mae_dec,mae_dec_sub,mae_dec_sub,mae_dec_above,mae_dec_above,medrel_above,medrel_above,auroc_sigma_err,auroc_sigma_err,frac_err_gt_flag,frac_err_gt_flag
+,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std
+scenario,,,,,,,,,,,,
+S0_random,0.028,0.007,0.046,0.012,0.021,0.006,0.035,0.009,0.962,0.029,0.002,0.001
+S1_Lextreme,0.125,0.014,0.236,0.028,0.083,0.009,0.098,0.014,0.883,0.033,0.104,0.013
+S2_T125,0.058,0.011,0.123,0.019,0.033,0.009,0.051,0.015,0.909,0.024,0.029,0.005
+S3_ff,0.471,0.104,0.84,0.152,0.332,0.087,0.584,0.323,0.699,0.09,0.502,0.095
+S4_LOPO,0.467,0.186,0.903,0.327,0.308,0.154,0.488,0.196,0.764,0.079,0.433,0.15
