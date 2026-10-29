@@ -5,7 +5,6 @@ Code, check logs, figure data and frozen results for the paper
 > J. M. Omar and M. Tan, *Conformal uncertainty intervals for neural MOSFET models under geometry,
 > temperature, process-corner, and technology shift* (manuscript; the full reference will be added on publication).
 
-Archived release (Zenodo DOI): to be added after the first release.
 
 The study trains deep ensembles for log10 I_D and log10 C_gg on the public MOSFET Electrical
 Simulation Dataset (MESD; Zhang et al., 2024) and compares eight interval methods (split, normalized,
